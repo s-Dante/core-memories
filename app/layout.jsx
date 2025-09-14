@@ -1,9 +1,15 @@
-import { Rubik } from "next/font/google";
+import { Rubik, Varela } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components";
 
-const rubik = Rubik({
+export const rubik = Rubik({
   variable: "--font-rubik",
+  subsets: ["latin"],
+});
+
+export const varela = Varela({
+  variable: "--font-varela",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -16,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${rubik.variable} antialiased`}
+        className={`${rubik.variable} ${varela.variable} antialiased bg-black text-white`}
       >
         <Header />
         {children}

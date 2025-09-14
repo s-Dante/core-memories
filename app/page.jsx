@@ -1,5 +1,10 @@
+import { Hero } from '@/components';
+
 export default function Home() {
   return (
-    <h1>Hola Gamers</h1>
+    <main>
+      <Hero />
+      <h1>Hols</h1>
+    </main>
   );
 }
