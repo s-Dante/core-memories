@@ -2,8 +2,11 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header>
-            <Link href="/">Core Memories</Link>
+        <header >
+            <Link href="/" >
+                <img src="/resources/svg/CM-Logo.svg" alt="Core Memories Logo" />
+                <span>Core Memories</span>
+            </Link>
 
             <nav>
                 <Link href="/games">Games</Link>

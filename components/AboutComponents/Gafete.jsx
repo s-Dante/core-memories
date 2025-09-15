@@ -19,7 +19,6 @@ export default function Gafete({ crew }) {
                                 href={link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="underline text-sm"
                             >
                                 {platform}
                             </Link>

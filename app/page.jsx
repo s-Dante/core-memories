@@ -1,5 +1,11 @@
+import { Hero, Info, GamesShowcase } from '@/components';
+
 export default function Home() {
   return (
-    <h1>Hola Gamers</h1>
+    <main>
+      <Hero />
+      <Info />
+      <GamesShowcase />
+    </main>
   );
 }
