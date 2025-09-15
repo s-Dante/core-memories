@@ -1,0 +1,193 @@
+[
+    {
+        "id": 1,
+        "title": "World Park",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Steam",
+                "link": "https://www.google.com"
+            },
+            {
+                "platform": "Epic Games",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 2,
+        "title": "Leon Larriega",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 3,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 4,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 5,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 6,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 7,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 8,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 9,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 10,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    },
+    {
+        "id": 11,
+        "title": "Geotrivia",
+        "cover": "resources/img/img.jpg",
+        "shortDescription": "",
+        "downloads": [
+            {
+                "platform": "Itch.io",
+                "link": "https://www.google.com"
+            }
+        ],
+        "details": {
+            "theme": "",
+            "story": "",
+            "artBible": []
+        }
+    }
+]

@@ -1,0 +1,62 @@
+{
+    "crew": [
+        {
+            "id": 1,
+            "name": "Dante Fernández",
+            "username": "@s-Dante",
+            "role": [
+                "Programador",
+                "Environment Artist"
+            ],
+            "image": "/images/crew/dante.jpg",
+            "socials": {
+                "portfolio": "",
+                "linkedIn": "https://www.linkedin.com/in/s-dante/",
+                "github": "https://github.com/s-Dante"
+            },
+            "qr": "/images/crew/dante-qr.png"
+        },
+        {
+            "id": 2,
+            "name": "Fernanda González",
+            "username": "@ferCore",
+            "role": [
+                "Animadora 2D",
+                "Social Media Manager"
+            ],
+            "image": "",
+            "socials": {
+                "portfolio": "https://readymag.website/u172468742/5593618/",
+                "instagram": "https://instagram.com/okidokifercha/"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Stacy Chapa",
+            "username": "@stacyCore",
+            "role": [
+                "Animadora 2D",
+                "Concept Artist"
+            ],
+            "image": "",
+            "socials": {
+                "portfolio": "",
+                "instagram": "https://www.instagram.com/h_a_ls",
+                "linkedIn": "https://www.linkedin.com/in/stacychapa/"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Sofia Villegas",
+            "username": "@coreSofia",
+            "role": [
+                "Lead 3D Artist"
+            ],
+            "image": "",
+            "socials": {
+                "portfolio": "https://www.sofiavillegas.com/#contacto",
+                "instagram": "https://www.instagram.com/fiiasso/"
+            }
+        }
+    ]
+}

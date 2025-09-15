@@ -1,5 +1,12 @@
+import { ImageGallery, AboutUs, OurMission, Crew } from "@/components";
+
 export default function About() {
     return (
-        <h1>Pagina de Acerca de</h1>
+        <main>
+            <ImageGallery />
+            <AboutUs />
+            <OurMission />
+            <Crew />
+        </main>
     );
 }
