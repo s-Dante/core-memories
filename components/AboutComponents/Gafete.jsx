@@ -3,14 +3,14 @@ import { componentsPath } from "@/config";
 
 export default function Gafete({ crew }) {
     return (
-        <article className="rounded-xl border p-4">
+        <article className="rounded-xl">
             <img src={componentsPath.gafete} alt="Imagen de Gafete" />
             <img src={crew.image} alt={`Miembro del crew: ${crew.name}`} />
 
-            <h3 className="mt-2 font-semibold">{crew.name}</h3>
-            <p className="text-sm opacity-80">{crew.username}</p>
+            <h3>{crew.name}</h3>
+            <p>{crew.username}</p>
 
-            <div className="mt-3 flex gap-3 flex-wrap">
+            <div>
                 {crew.socials && Object.keys(crew.socials).length > 0 ? (
                     Object.entries(crew.socials).map(([platform, link]) =>
                         link ? (
@@ -26,12 +26,12 @@ export default function Gafete({ crew }) {
                         ) : null
                     )
                 ) : (
-                    <p className="text-sm opacity-70">No hay redes sociales para mostrar</p>
+                    <p>No hay redes sociales para mostrar</p>
                 )}
             </div>
 
             {Array.isArray(crew.role) && crew.role.length > 0 && (
-                <ul className="mt-3 text-sm list-disc pl-5">
+                <ul>
                     {crew.role.map((r, i) => (
                         <li key={i}>{r}</li>
                     ))}
