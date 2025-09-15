@@ -8,11 +8,11 @@
                 "Programador",
                 "Environment Artist"
             ],
-            "image": "/images/crew/dante.jpg",
+            "image": "/resources/imgs/AboutImgs/Crew/DanteFdz.jpg",
             "socials": {
                 "portfolio": "",
                 "linkedIn": "https://www.linkedin.com/in/s-dante/",
-                "github": "https://github.com/s-Dante"
+                "github": "https://github.com/s-DanteFdz"
             },
             "qr": "/images/crew/dante-qr.png"
         },
@@ -24,7 +24,7 @@
                 "Animadora 2D",
                 "Social Media Manager"
             ],
-            "image": "",
+            "image": "/resources/imgs/AboutImgs/Crew/FerGzz.jpg",
             "socials": {
                 "portfolio": "https://readymag.website/u172468742/5593618/",
                 "instagram": "https://instagram.com/okidokifercha/"
@@ -38,7 +38,7 @@
                 "Animadora 2D",
                 "Concept Artist"
             ],
-            "image": "",
+            "image": "/resources/imgs/AboutImgs/Crew/StacyChapa.jpg",
             "socials": {
                 "portfolio": "",
                 "instagram": "https://www.instagram.com/h_a_ls",
@@ -52,7 +52,7 @@
             "role": [
                 "Lead 3D Artist"
             ],
-            "image": "",
+            "image": "/resources/imgs/AboutImgs/Crew/SofiaVillegas.jpg",
             "socials": {
                 "portfolio": "https://www.sofiavillegas.com/#contacto",
                 "instagram": "https://www.instagram.com/fiiasso/"
