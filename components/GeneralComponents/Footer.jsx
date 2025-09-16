@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer>
             <h2>For the love of games</h2>
-            <img src="/resources/svg/CM-Logo.svg" alt="Logotipo de Core Memories" />
+            <img src="/resources/svg/CM-Logo.svg" alt="Logotipo de Core Memories" className="h-22" />
             <div>
                 <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
