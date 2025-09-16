@@ -1,9 +1,5 @@
-import { getBaseUrl } from "@/app/lib"
-
 export async function getCrew() {
-    const res = await fetch(`${getBaseUrl()}/api/crew`, {
-        next: { revalidate: 60 },
-    });
-    if (!res.ok) throw new Error("No se pudo cargar crew");
-    return res.json();
+  const res = await fetch(`${process.env.FETCH_CREW}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Error fetching games");
+  return res.json();
 }
