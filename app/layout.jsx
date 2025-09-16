@@ -19,17 +19,15 @@ export const varela = Varela({
   weight: "400"
 });
 
-export const metadata = {
-  title: "Core Memories",
-  description: "Empresa de videojuegos independiente",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${varela.className} ${rubik.variable} ${varien.variable} 
-        antialiased`}
+        antialiased
+        scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-400/50 scrollbar-track-gray-200/10
+        grid grid-rows-[auto_1fr_auto] min-h-screen
+        `}
       >
         <Header />
         {children}

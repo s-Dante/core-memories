@@ -1,6 +1,11 @@
 import { notFound } from "next/navigation";
 import { getGamesById } from "@/app/lib/getGamesById";
 
+export const metadata = {
+  title: "Game Details | Core Memories",
+  description: "Detalles del videojuego en Core Memories",
+};
+
 export default async function GameDetailPage({ params }) {
   const { id } = params;
 

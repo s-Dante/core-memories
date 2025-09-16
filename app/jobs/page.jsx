@@ -1,5 +1,10 @@
 import { FollowUs } from '@/components';
 
+export const metadata = {
+  title: "Jobs | Core Memories",
+  description: "Ofertas de trabajo en Core Memories",
+};
+
 export default function Jobs() {
     return (
         <article>

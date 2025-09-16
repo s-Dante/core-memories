@@ -1,5 +1,10 @@
 import { FollowUs } from '@/components';
 
+export const metadata = {
+  title: "Merch | Core Memories",
+  description: "Tienda online de Core Memories",
+};
+
 export default function Merch() {
     return (
         <article>

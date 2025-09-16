@@ -1,5 +1,10 @@
 import { getBlogEntryById } from "@/app/lib";
 
+export const metadata = {
+  title: "Blog Entry | Core Memories",
+  description: "Detalles de la entrada del blog en Core Memories",
+};
+
 export default async function BlogEntryPage({ params }) {
   const { blogID, entradaID } = params;
   const entry = await getBlogEntryById(blogID, entradaID);
