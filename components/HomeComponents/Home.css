@@ -23,16 +23,25 @@
 }
 
 .parallax-fg {
-    --parallax-speed: -20;
+    --parallax-speed: 5;
     z-index: 2;
     width: 10px;
-    height: auto;
 }
 
 .parallax-text {
-    --parallax-speed: 30;
+    --parallax-speed: -5;
     z-index: 3
 }
+
+.parallax-info {
+    z-index: 4;
+}
+
+
+.parallax-showcase {
+    z-index: 10
+}
+
 
 @keyframes parallax {
     to {
