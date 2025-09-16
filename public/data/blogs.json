@@ -25,7 +25,8 @@
             {
                 "id": "devlog-videos",
                 "type": "album",
-                "title": "Dark Woods Video Devlogs",
+                "title": " Woods Video Devlogs",
+                "cover": "/images/bloDarkg/darkwoods-videos.jpg",
                 "date": "2025-08-22",
                 "tracks": [
                     {

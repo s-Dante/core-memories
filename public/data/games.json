@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "World Park",
-        "cover": "resources/img/img.jpg",
+        "cover": "/resources/img/Games/WorldPark/cover.jpg",
         "shortDescription": "",
         "downloads": [
             {
@@ -17,13 +17,16 @@
         "details": {
             "theme": "",
             "story": "",
-            "artBible": []
+            "artBible": [
+                "/resources/img/Games/WorldPark/art1.jpg",
+                "/resources/img/Games/WorldPark/art2.jpg"
+            ]
         }
     },
     {
         "id": 2,
         "title": "Leon Larriega",
-        "cover": "resources/img/img.jpg",
+        "cover": "/resources/img/img.jpg",
         "shortDescription": "",
         "downloads": [
             {
@@ -40,7 +43,7 @@
     {
         "id": 3,
         "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
+        "cover": "/resources/img/img.jpg",
         "shortDescription": "",
         "downloads": [
             {
@@ -57,126 +60,7 @@
     {
         "id": 4,
         "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 5,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 6,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 7,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 8,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 9,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 10,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 11,
-        "title": "Geotrivia",
-        "cover": "resources/img/img.jpg",
+        "cover": "/resources/img/img.jpg",
         "shortDescription": "",
         "downloads": [
             {

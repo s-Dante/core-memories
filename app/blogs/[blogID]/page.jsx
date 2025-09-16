@@ -1,0 +1,19 @@
+import { Disquete, CD } from "@/components";
+import { getBlogEntries } from "@/app/lib";
+
+export default async function BlogEntriesPage({ params }) {
+    const { blogID } = params;
+    const entries = await getBlogEntries(blogID);
+
+    return (
+        <main>
+            {entries.map((entry) =>
+                entry.type === "disquete" ? (
+                    <Disquete key={entry.id} entry={entry} blogID={blogID} />
+                ) : (
+                    <CD key={entry.id} entry={entry} blogID={blogID} />
+                )
+            )}
+        </main>
+    );
+}
