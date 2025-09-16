@@ -6,7 +6,7 @@ export default function Info() {
             </h2>
 
             <p>Check out our missions</p>
-            <span>↓</span>
+            <img src="/resources/svg/Arrow.svg" alt="Arrow pointing down"  />
         </section>
     );
 }
