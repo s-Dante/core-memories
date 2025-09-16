@@ -10,12 +10,12 @@ export const aboutImageGallery = {
         },
         {
             id: 2,
-            src: generlPath + " image2.jpg",
+            src: generlPath + "image2.jpg",
             alt: generalDescription + " ideando nuevos proyectos"
         },
         {
             id: 3,
-            src: generlPath + " image3.jpg",
+            src: generlPath + "image3.jpg",
             alt: generalDescription + " pasándola bien"
         }
     ]
