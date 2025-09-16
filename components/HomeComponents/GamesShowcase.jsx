@@ -1,5 +1,5 @@
+import { getGames } from "@/app/lib";
 import { SDGCard } from "@/components";
-import { getGames } from "@/app/lib/getGames";
 
 export default async function GamesShowcase() {
     const gamesList = await getGames();

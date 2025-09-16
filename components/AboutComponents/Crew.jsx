@@ -1,5 +1,5 @@
 import { Gafete } from "@/components";
-import { getCrew } from "@/app/lib/getCrew";
+import { getCrew } from "@/app/lib";
 
 export default async function Crew() {
     const crewList = await getCrew();

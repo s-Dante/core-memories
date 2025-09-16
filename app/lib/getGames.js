@@ -1,9 +1,5 @@
-import { getBaseUrl } from "@/app/lib"
-
 export async function getGames() {
-    const res = await fetch(`${getBaseUrl()}/api/games`, {
-        next: { revalidate: 60 },
-    });
-    if (!res.ok) throw new Error("No se pudo cargar juegos");
-    return res.json();
+  const res = await fetch(`${process.env.FETCH_GAMES}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Error fetching games");
+  return res.json();
 }

@@ -1,5 +1,5 @@
 import { InfoGCard} from '@/components';
-import { getGames } from "@/app/lib/getGames";
+import { getGames } from '@/app/lib';
 
 export default async function Games() {
     const games = await getGames();

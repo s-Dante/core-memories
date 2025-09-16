@@ -1,20 +1,17 @@
-import { NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import path from "path";
+import games from "@/public/data/games.json";
 
-async function readGames() {
-  const fp = path.join(process.cwd(), "public", "data", "games.json");
-  const raw = await readFile(fp, "utf-8");
-  return JSON.parse(raw);
-}
-
-export async function GET(_req, { params }) {
+export async function GET(request, { params }) {
   const { id } = params;
-  const games = await readGames();
+  const game = games.find((g) => g.id === Number(id));
 
-  const game = games.find(g => String(g.id) === String(id));
   if (!game) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
+    return new Response(JSON.stringify({ error: "Game not found" }), {
+      status: 404,
+      headers: { "Content-Type": "application/json" },
+    });
   }
-  return NextResponse.json(game);
+
+  return new Response(JSON.stringify(game), {
+    headers: { "Content-Type": "application/json" },
+  });
 }
