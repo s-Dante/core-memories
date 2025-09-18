@@ -28,11 +28,19 @@ const coverClasses = `
 
 export default function GSDCard({ game, whereToGo }) {
     let path;
+    let coverPath;
 
     if (whereToGo === 0) {
         path = "/games";
     } else if (whereToGo === 1) {
         path = `/games/${game.id}`;
+    }
+
+    if (game.cover === ""){
+        coverPath = "/resources/imgs/GamesImgs/Covers/comingsoon.jpg";
+    }
+    else {
+        coverPath = game.cover;
     }
 
     return (
@@ -44,7 +52,7 @@ export default function GSDCard({ game, whereToGo }) {
                     className={sdImgClasses} 
                 />
                 <img 
-                    src={game.cover} 
+                    src={coverPath} 
                     alt={`Portada del videojuego ${game.title}`}
                     className={coverClasses}    
                 />

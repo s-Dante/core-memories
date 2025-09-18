@@ -63,7 +63,6 @@
 .other-content {
     z-index: 10;
     position: relative;
-    background:hsl(238, 10%, 6%);
     padding-block: 6rem;
 }
 

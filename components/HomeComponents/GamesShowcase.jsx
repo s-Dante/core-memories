@@ -4,6 +4,7 @@ import { SDGCard } from "@/components";
 const sectionClasses = `
     pt-40
     h-[100dvh]
+    bg-zinc-900
 `;
 
 

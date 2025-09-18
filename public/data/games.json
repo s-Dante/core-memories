@@ -26,7 +26,7 @@
     {
         "id": 2,
         "title": "Leon Larriega",
-        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
+        "cover": "",
         "shortDescription": "",
         "downloads": [
             {
@@ -43,24 +43,7 @@
     {
         "id": 3,
         "title": "Geotrivia",
-        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 4,
-        "title": "Geotrivia",
-        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
+        "cover": "",
         "shortDescription": "",
         "downloads": [
             {
