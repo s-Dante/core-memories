@@ -19,18 +19,22 @@ export const varela = Varela({
   weight: "400"
 });
 
+const bodyClasses = `
+  ${varela.className} ${rubik.variable} ${varien.variable}
+  antialiased 
+  scrollbar
+  min-h-screen
+  grid grid-templete-rows-[auto-1fr_auto]
+`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${varela.className} ${rubik.variable} ${varien.variable} 
-        antialiased
-        scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-400/50 scrollbar-track-gray-200/10
-        grid grid-rows-[auto_1fr_auto] min-h-screen
-        `}
-      >
+      <body className={bodyClasses} >
         <Header />
+
         {children}
+        
         <Footer />
       </body>
     </html>

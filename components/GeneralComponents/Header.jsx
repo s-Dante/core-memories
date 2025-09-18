@@ -4,10 +4,14 @@ import "../GeneralComponents/Header.css";
 
 
 const headerClasses = `
-    ${rubik.className} font-bold text-zinc-200 header
+    ${rubik.className} header
+    fixed inset-x-0 top-0 z-50
     bg-gradient-to-b from-black/80 via-black/50 to-transparent
-    backdrop-blur-sm sticky top-0 z-50 px-15 py-4
-    flex justify-between items-center
+    backdrop-blur-sm 
+    px-6 sm:px-10 lg:px-15 py-4
+    flex items-center justify-between
+    text-zinc-200 font-bold
+    sticky
 `;
 
 const logoLinkClasses = `

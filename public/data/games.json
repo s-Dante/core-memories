@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "World Park",
-        "cover": "/resources/img/Games/WorldPark/cover.jpg",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
         "shortDescription": "",
         "downloads": [
             {
@@ -26,7 +26,7 @@
     {
         "id": 2,
         "title": "Leon Larriega",
-        "cover": "/resources/img/img.jpg",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
         "shortDescription": "",
         "downloads": [
             {
@@ -43,7 +43,7 @@
     {
         "id": 3,
         "title": "Geotrivia",
-        "cover": "/resources/img/img.jpg",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
         "shortDescription": "",
         "downloads": [
             {
@@ -60,7 +60,7 @@
     {
         "id": 4,
         "title": "Geotrivia",
-        "cover": "/resources/img/img.jpg",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
         "shortDescription": "",
         "downloads": [
             {

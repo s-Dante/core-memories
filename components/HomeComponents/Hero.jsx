@@ -4,26 +4,53 @@ import "../HomeComponents/Home.css"
 
 const sectionClasses = `
     parallax
+    relative isolate 
+    min-h-[42rem] sm:min-h-[54rem] md:min-h-[68vh]
+    bg-zinc-900 text-zinc-200 overflow-hidden
+    h-[90dvh]
 `;
 
 const imgBgClasses = `
     parallax-bg
+    absolute inset-0 w-full object-cover object-center
+    pointer-events-none select-none
 `;
 
 const imgFgClasses = `
     parallax-fg
-    object-cover
-    h-30
+    opacity-95
+    galaxia
+    absoulte left-1/2 top1/2 -translate-x-1/2 -translate-y-1/2
+    w-[115%] md:w-[105%] max-w-none
+    pointer-events-none select-none
 `;
 
 const textClasses = `
     ${varela.className}
     parallax-text
-    text-7xl
-    uppercase
-    text-right
-    px-15
+    absolute right-6 md:right-12 bottom-10 md:bottom-16
+    text-right uppercase tracking-tight leading-[0.9]
+    drop-shadow-[0_3px_8px_rgba(0,0,0,0.6)]
+    text-[14vw] sm:text-[10vw] md:text-[7vw] lg:text-[5vw]
 `;
+
+const imgHelperBg = `
+    parallax-foreground-back
+    object-fill 
+    z-8
+    -rotate-2
+`;
+
+const imgHelperFg = `
+    parallax-foreground-front    
+    z-9
+`;
+
+const imgDust = `
+    parallax-dust
+    opacity-50
+`;
+
 
 export default function Hero() {
     return (
@@ -39,17 +66,40 @@ export default function Hero() {
                 </filter>
             </svg>
 
+            {/* Imagen de cover tracera */}
+            <img
+                src={homeImgs.images[4].src}
+                alt={homeImgs.images[4].alt}
+                className={imgHelperBg}
+            />
+
+            {/* Imagen de cover frontal */}
+            <img
+                src={homeImgs.images[3].src}
+                alt={homeImgs.images[3].alt}
+                className={imgHelperFg}
+            />
+
+            {/* Imagen de cover tracera */}
             <img
                 src={homeImgs.images[0].src}
                 alt={homeImgs.images[0].alt}
-                className={imgBgClasses}           // .parallax-bg compone el tamaño + bleed
+                className={imgBgClasses}
                 style={{ filter: "url(#warp)" }}
             />
 
+            {/* Imagen de cover tracera */}
+            <img
+                src={homeImgs.images[2].src}
+                alt={homeImgs.images[2].alt}
+                className={imgDust}
+            />
+
+            {/* Imagen de galaxia*/}
             <img
                 src={homeImgs.images[1].src}
                 alt={homeImgs.images[1].alt}
-                className={imgFgClasses}           // SIN -rotate-30 aquí
+                className={imgFgClasses}
             />
 
             <h2 className={textClasses}>

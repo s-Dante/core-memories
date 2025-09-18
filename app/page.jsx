@@ -5,10 +5,13 @@ export const metadata = {
   description: "Empresa de videojuegos independiente",
 };
 
+const mainClasses = `
+  pt-header
+`;
 
 export default function Home() {
   return (
-    <main>
+    <main className={mainClasses}>
       <Hero />
       <Info />
       <GamesShowcase />

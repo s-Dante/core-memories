@@ -27,3 +27,25 @@ html {
   scrollbar-gutter: stable;
 }
 
+main {
+  flex: 1;
+}
+
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #777;
+  border-radius: 100vh;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rebeccapurple;
+}

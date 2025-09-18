@@ -21,8 +21,9 @@ const sdImgClasses = `
 const coverClasses = `
     absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
     z-10
-    w-[72%] h-auto
+    w-[65%] h-auto
     pointer-events-none select-none
+    rounded-2xl border-zinc-800 border-4
 `;
 
 export default function GSDCard({ game, whereToGo }) {
@@ -35,10 +36,18 @@ export default function GSDCard({ game, whereToGo }) {
     }
 
     return (
-        <article>
+        <article className={articleClasses}>
             <Link href={path}>
-                <img src={componentsPath.sd} alt="Ilustracion de un SD" />
-                <img src={game.cover} alt={`Portada del videojuego ${game.title}`} />
+                <img 
+                    src={componentsPath.sd} 
+                    alt="Ilustracion de un SD"
+                    className={sdImgClasses} 
+                />
+                <img 
+                    src={game.cover} 
+                    alt={`Portada del videojuego ${game.title}`}
+                    className={coverClasses}    
+                />
             </Link>
         </article>
     );
