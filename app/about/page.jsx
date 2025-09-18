@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function About() {
     return (
-        <main className="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-14 space-y-28 md:space-y-36">
+        <main className="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-14 space-y-28 md:space-y-10">
             <ImageGallery />
             <AboutUs />
             <OurMission />
