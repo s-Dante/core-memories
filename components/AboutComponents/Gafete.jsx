@@ -10,15 +10,14 @@ const articleClasses = `
 
 export default function Gafete({ crew }) {
     return (
-        <article className="articleClasses">
-            <div className="h-3 w-24 bg-black/40 rounded-full mx-auto mb-4" />
+        <article className="articleClasses mb-50 mt-10">
 
             {/* marco del gafete */}
             <div className="relative rounded-2xl bg-[#242424] p-4">
                 <div className="flex items-start gap-4">
                     {/* foto */}
-                    <div className="shrink-0">
-                        <div className="w-20 h-20 rounded-xl overflow-hidden ring-1 ring-white/10">
+                    <div className="shrink-0 justify-items-center align-items-center">
+                        <div className="w-20 h-20 rounded-xl overflow-hidden ring-1 ring-white/10 justify-self-center align-self-center">
                             <img src={crew.image} alt={`Miembro del crew: ${crew.name}`} className="w-full h-full object-cover grayscale" />
                         </div>
                     </div>
@@ -27,7 +26,7 @@ export default function Gafete({ crew }) {
                     <div className="min-w-0">
                         <p className="text-sm text-neutral-300">{Array.isArray(crew.role) ? crew.role[0] : crew.role}</p>
                         <p className="text-xs text-neutral-400">{crew.username}</p>
-                        <h3 className="mt-1 text-lg font-semibold text-white truncate">{crew.name}</h3>
+                        <h3 className="mt-1 text-lg font-semibold text-white truncate text-wrap">{crew.name}</h3>
                     </div>
                 </div>
 

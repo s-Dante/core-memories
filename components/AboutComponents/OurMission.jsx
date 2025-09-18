@@ -1,7 +1,7 @@
 export default function OurMission() {
     return (
-        <section className="relative bg-[#1f1f1f] rounded-xl overflow-hidden py-14 md:py-20 px-6 md:px-10">
-            <div className="absolute -left-20 top-10 w-[32rem] h-[32rem] bg-[#4a4a4a] rounded-2xl rotate-1 opacity-80 pointer-events-none bg-[url('/resources/imgs/AboutImgs/6.png')]" />
+        <section className="relative bg-[#1f1f1f] rounded-xl overflow-hidden py-14 md:py-20 px-6 md:px-10 min-h-[70vh] flex items-center">
+            <div className="absolute -left-20 top-10 w-[32rem] h-[32rem] rounded-2xl rotate-1 opacity-80 pointer-events-none bg-[url('/resources/imgs/AboutImgs/Casuals/7.jpg')] bg" />
 
             <div className="relative max-w-3xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-4">Nuestra Misión</h2>
