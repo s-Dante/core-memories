@@ -13,18 +13,19 @@ const footerClasses = `
 
 const textClasses = `
     ${varien.className}
-    text-[15rem]
+    text-[13rem]
     leading-50
     tracking-tighter
-    w-[90%]
+    w-[100%]
     inline-block
+    mb-10
 `;
 
 const imgClasses = `
     h-50
     w-auto
     inline-block
-    relative
+    absolute
     top-[-14%]
     right-[25%]
 `;

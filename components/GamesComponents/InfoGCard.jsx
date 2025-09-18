@@ -1,9 +1,9 @@
 import { SDGCard } from '@/components';
 import Link from 'next/link';
 
-export default function InfoGCard({ game }) {
+export default function InfoGCard({ game, id }) {
     return (
-        <article>
+        <article id={id}>
             <SDGCard key={game.id} game={game} whereToGo={1} />
             <h2>{game.title}</h2>
             <p>{game.shortDescription}</p>

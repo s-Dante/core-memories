@@ -3,7 +3,6 @@ import { varela } from "@/app/layout";
 import "../HomeComponents/Home.css"
 
 const sectionClasses = `
-    parallax
     relative isolate 
     min-h-[42rem] sm:min-h-[54rem] md:min-h-[68vh]
     bg-zinc-900 text-zinc-200 overflow-hidden
@@ -11,43 +10,33 @@ const sectionClasses = `
 `;
 
 const imgBgClasses = `
-    parallax-bg
     absolute inset-0 w-full object-cover object-center
     pointer-events-none select-none
+    -z-30
 `;
 
 const imgFgClasses = `
-    parallax-fg
-    opacity-95
-    galaxia
-    absoulte left-1/2 top1/2 -translate-x-1/2 -translate-y-1/2
-    w-[115%] md:w-[105%] max-w-none
+    opacity-95 object-center
+    absolute
+    h-[100%] w-auto
     pointer-events-none select-none
+    align-self-center justify-self-center
+    z-10
 `;
+
 
 const textClasses = `
     ${varela.className}
-    parallax-text
-    absolute right-6 md:right-12 bottom-10 md:bottom-16
+    absolute z-20
+    right-6 md:right-12 py-40
     text-right uppercase tracking-tight leading-[0.9]
     drop-shadow-[0_3px_8px_rgba(0,0,0,0.6)]
-    text-[14vw] sm:text-[10vw] md:text-[7vw] lg:text-[5vw]
+    text-[14vw] sm:text-[10vw] md:text-[5vw] lg:text-[5vw]
 `;
 
-const imgHelperBg = `
-    parallax-foreground-back
-    object-fill 
-    z-8
-    -rotate-2
-`;
-
-const imgHelperFg = `
-    parallax-foreground-front    
-    z-9
-`;
 
 const imgDust = `
-    parallax-dust
+    absolute
     opacity-50
 `;
 
@@ -65,20 +54,6 @@ export default function Hero() {
                     </feDisplacementMap>
                 </filter>
             </svg>
-
-            {/* Imagen de cover tracera */}
-            <img
-                src={homeImgs.images[4].src}
-                alt={homeImgs.images[4].alt}
-                className={imgHelperBg}
-            />
-
-            {/* Imagen de cover frontal */}
-            <img
-                src={homeImgs.images[3].src}
-                alt={homeImgs.images[3].alt}
-                className={imgHelperFg}
-            />
 
             {/* Imagen de cover tracera */}
             <img

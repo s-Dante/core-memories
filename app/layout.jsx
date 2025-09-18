@@ -25,6 +25,7 @@ const bodyClasses = `
   scrollbar
   min-h-screen
   grid grid-templete-rows-[auto-1fr_auto]
+  bg-red-500
 `;
 
 export default function RootLayout({ children }) {

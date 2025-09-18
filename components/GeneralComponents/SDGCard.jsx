@@ -16,6 +16,7 @@ const sdImgClasses = `
     z-0
     p-3
     w-full h-full
+    pointer-events-none select-none
 `;
 
 const coverClasses = `
@@ -31,7 +32,7 @@ export default function GSDCard({ game, whereToGo }) {
     let coverPath;
 
     if (whereToGo === 0) {
-        path = "/games";
+        path = `/games#game-${game.id}`;
     } else if (whereToGo === 1) {
         path = `/games/${game.id}`;
     }
@@ -45,7 +46,7 @@ export default function GSDCard({ game, whereToGo }) {
 
     return (
         <article className={articleClasses}>
-            <Link href={path}>
+            <Link href={path} className={linkClasses}>
                 <img 
                     src={componentsPath.sd} 
                     alt="Ilustracion de un SD"

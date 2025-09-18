@@ -2,7 +2,7 @@ import { varien, rubik } from "@/app/layout";
 import "../HomeComponents/Home.css"
 
 const sectionClasses = `
-    other-content
+    
     text-zinc-200
     px-6 sm:px-10 lg:px-16 py-10 sm:py-14 lg:py-20
     h-[100dvh]
@@ -14,21 +14,22 @@ const sectionClasses = `
 const phraseClasses = `
     ${varien.className}
     uppercase tracking-tight
-    text-4xl sm:text-6xl lg:text-[11rem]
+    text-4xl sm:text-6xl md:text-9xl lg:text-[9rem]
     leading-[0.95]
-    w-[80vw]
+    sm:w-[100vw] md:w-[90vw] lg:w-[80vw]
     pt-20
 `;
 
 const checkClasses = `
     ${rubik.className}
-    mt-8 text-2xl sm:text-4xl opacity-90
-    uppercase text-bold
+    relative flex items-center gap-4 mt-[180px]
+    text-2xl sm:text-4xl opacity-90
+    uppercase font-bold
 `;
 
 const arrowClasses = `
-    mt-2 h-11 w-auto
-    animate-bounce
+    h-10 w-auto animate-bounce
+    static flex items-center
 `;
 
 
