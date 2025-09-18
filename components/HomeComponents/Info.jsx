@@ -22,7 +22,7 @@ const phraseClasses = `
 
 const checkClasses = `
     ${rubik.className}
-    relative flex items-center gap-4 mt-[180px]
+    relative flex items-center gap-4 mt-[22rem]
     text-2xl sm:text-4xl opacity-90
     uppercase font-bold
 `;

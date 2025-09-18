@@ -8,8 +8,8 @@ export default async function Crew() {
 
     return (
         <section aria-labelledby="crew-heading">
-            <h2>Crew</h2>
-            <div>
+            <h2 id="crew-heading" className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-8">Crew</h2>
+            <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 {crewList.map((crew) => (
                     <Gafete key={crew.id} crew={crew} />
                 ))}

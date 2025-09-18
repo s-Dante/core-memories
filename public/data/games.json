@@ -3,16 +3,9 @@
         "id": 1,
         "title": "World Park",
         "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
-        "shortDescription": "",
+        "shortDescription": "WorldPark es un juego de exploracion y aventuras en el que te sumergiras con Adrien a un parque tematico en el que deberas recolectar tus estampillas para completar tu album",
         "downloads": [
-            {
-                "platform": "Steam",
-                "link": "https://www.google.com"
-            },
-            {
-                "platform": "Epic Games",
-                "link": "https://www.google.com"
-            }
+            
         ],
         "details": {
             "theme": "",
@@ -21,40 +14,6 @@
                 "/resources/img/Games/WorldPark/art1.jpg",
                 "/resources/img/Games/WorldPark/art2.jpg"
             ]
-        }
-    },
-    {
-        "id": 2,
-        "title": "Leon Larriega",
-        "cover": "",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
-        }
-    },
-    {
-        "id": 3,
-        "title": "Geotrivia",
-        "cover": "",
-        "shortDescription": "",
-        "downloads": [
-            {
-                "platform": "Itch.io",
-                "link": "https://www.google.com"
-            }
-        ],
-        "details": {
-            "theme": "",
-            "story": "",
-            "artBible": []
         }
     }
 ]

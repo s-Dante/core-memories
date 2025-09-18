@@ -25,9 +25,9 @@ const imgClasses = `
     h-50
     w-auto
     inline-block
-    absolute
     top-[-14%]
     right-[25%]
+    hidden
 `;
 
 const socialLinkNav = `
@@ -71,7 +71,7 @@ export default function Footer() {
             <img 
                 src="/resources/svg/CM-Logo.svg" 
                 alt="Logotipo de Core Memories"
-                className={imgClasses} 
+                className={imgClasses} style={{display: "none"}}
             />
             <div className={socialLinkNav}>
                 <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className={socialLink}>Instagram</a>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <a href={`mailto:${socialLinks.email}`} target="_blank" rel="noopener noreferrer" className={socialLink}>Email us</a>
             </div>
 
-            <nav className={footerNavClasses}>
+            <nav className={footerNavClasses} style={{display: "none"}}>
                 <Link href="/privacy">Privacy Policy</Link>
                 <Link href="/terms">Terms of Service</Link>
                 <Link href="/contact">Contact Us</Link>
