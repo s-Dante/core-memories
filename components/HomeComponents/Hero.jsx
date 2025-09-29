@@ -1,43 +1,46 @@
+// components/HomeComponents/Hero.jsx
 import { homeImgs } from '@/config';
 import { varela } from "@/app/layout";
 import "../HomeComponents/Home.css"
 
 const sectionClasses = `
     relative isolate 
-    min-h-[42rem] sm:min-h-[54rem] md:min-h-[68vh]
-    bg-zinc-900 text-zinc-200 overflow-hidden
-    h-[90dvh]
+    min-h-[100dvh] 
+    bg-zinc-900 text-zinc-200 
+    flex items-center justify-center // Usamos flex para centrar el contenido como base
+    overflow-hidden
 `;
 
 const imgBgClasses = `
-    absolute inset-0 w-full object-cover object-center
+    absolute inset-0 w-full h-full object-cover // Aseguramos que cubra todo el contenedor
     pointer-events-none select-none
     -z-30
 `;
 
 const imgFgClasses = `
-    opacity-95 object-center
     absolute
-    h-[100%] w-auto
+    w-2/3 max-w-lg // Controlamos el ancho en lugar de la altura
+    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 // Centrado perfecto
+    opacity-95
     pointer-events-none select-none
-    align-self-center justify-self-center
     z-10
 `;
-
 
 const textClasses = `
     ${varela.className}
     absolute z-20
-    right-6 md:right-12 py-40
+    px-6 md:px-12
+    w-full top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-16 // Posicionamiento responsivo
     text-right uppercase tracking-tight leading-[0.9]
     drop-shadow-[0_3px_8px_rgba(0,0,0,0.6)]
-    text-[14vw] sm:text-[10vw] md:text-[5vw] lg:text-[5vw]
+    // Tamaños de fuente ajustados para móvil primero
+    text-6xl sm:text-7xl md:text-8xl lg:text-9xl
 `;
 
-
 const imgDust = `
-    absolute
+    absolute inset-0 w-full h-full
     opacity-50
+    object-cover
 `;
 
 
@@ -55,7 +58,7 @@ export default function Hero() {
                 </filter>
             </svg>
 
-            {/* Imagen de cover tracera */}
+            {/* Imagen de fondo */}
             <img
                 src={homeImgs.images[0].src}
                 alt={homeImgs.images[0].alt}
@@ -63,20 +66,21 @@ export default function Hero() {
                 style={{ filter: "url(#warp)" }}
             />
 
-            {/* Imagen de cover tracera */}
+            {/* Polvo estelar */}
             <img
                 src={homeImgs.images[2].src}
                 alt={homeImgs.images[2].alt}
                 className={imgDust}
             />
 
-            {/* Imagen de galaxia*/}
+            {/* Galaxia (Foreground) */}
             <img
                 src={homeImgs.images[1].src}
                 alt={homeImgs.images[1].alt}
                 className={imgFgClasses}
             />
 
+            {/* Texto */}
             <h2 className={textClasses}>
                 Where<br />dreams<br />are made
             </h2>

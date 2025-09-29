@@ -26,6 +26,11 @@ const headerClasses = `
   grid gap-6 md:grid-cols-[auto,1fr] items-center
 `;
 
+const separador =  `
+    h-[50px]
+    md:h-[100px]
+`;
+
 export default async function GameDetailPage({ params }) {
   const { id } = params;
 
@@ -38,6 +43,7 @@ export default async function GameDetailPage({ params }) {
 
   return (
     <article className={articleClasses}>
+      <div className={separador}></div>
       <div className={glassContainer}>
         <header className={headerClasses}>
           <div className="flex justify-center">

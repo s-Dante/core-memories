@@ -1,42 +1,32 @@
+// components/GeneralComponents/Footer.jsx
 import Link from "next/link";
 import { socialLinks } from '@/config';
-import {varien, rubik, varela} from '@/app/layout';
+import { varien, rubik, varela } from '@/app/layout';
 
 const currentYear = new Date().getFullYear();
 
 const footerClasses = `
     bg-zinc-950 
     text-zinc-200
-    px-4 py-2
+    px-4 sm:px-8 py-12
     z-20
+    text-center sm:text-left
 `;
 
 const textClasses = `
     ${varien.className}
-    text-[13rem]
-    leading-50
+    text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] // Ajustado para ser responsivo
+    leading-none
     tracking-tighter
-    w-[100%]
-    inline-block
     mb-10
-`;
-
-const imgClasses = `
-    h-50
-    w-auto
-    inline-block
-    top-[-14%]
-    right-[25%]
-    hidden
 `;
 
 const socialLinkNav = `
     ${rubik.className}
     font-bold
-    text-4xl
-    flex
-    flex-row
-    space-x-30
+    text-2xl sm:text-3xl lg:text-4xl
+    flex flex-wrap justify-center sm:justify-start
+    gap-x-8 sm:gap-x-12 gap-y-4
     uppercase
 `;
 
@@ -47,32 +37,24 @@ const socialLink = `
 `;
 
 const footerNavClasses = `
-    ${varela.className}
-    flex
-    gap-4
-    text-lg
-    text-xs
-    justify-self-center
+    flex flex-wrap justify-center gap-4 sm:gap-6
+    text-sm
     mt-10
-    mb-none
 `;
 
 const footerRights = `
     ${varien.className}
     text-sm
-    mt-4
+    mt-8
     text-center
+    opacity-70
 `;
 
 export default function Footer() {
     return (
         <footer className={footerClasses}>
             <h2 className={textClasses}>For the love of games</h2>
-            <img 
-                src="/resources/svg/CM-Logo.svg" 
-                alt="Logotipo de Core Memories"
-                className={imgClasses} style={{display: "none"}}
-            />
+            
             <div className={socialLinkNav}>
                 <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className={socialLink}>Instagram</a>
                 <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className={socialLink}>Facebook</a>
@@ -81,7 +63,11 @@ export default function Footer() {
                 <a href={`mailto:${socialLinks.email}`} target="_blank" rel="noopener noreferrer" className={socialLink}>Email us</a>
             </div>
 
-            <nav className={footerNavClasses} style={{display: "none"}}>
+            {/* Pregunta: Estos links estaban ocultos con style={{display: "none"}}. 
+              ¿Quieres mostrarlos? Si no, puedes eliminar este <nav>. 
+              Los he dejado visibles por ahora.
+            */}
+            <nav className={footerNavClasses}>
                 <Link href="/privacy">Privacy Policy</Link>
                 <Link href="/terms">Terms of Service</Link>
                 <Link href="/contact">Contact Us</Link>

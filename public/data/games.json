@@ -5,6 +5,58 @@
         "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
         "shortDescription": "WorldPark es un juego de exploracion y aventuras en el que te sumergiras con Adrien a un parque tematico en el que deberas recolectar tus estampillas para completar tu album",
         "downloads": [
+            {"platform": "Epic", "link": "https://www.google.com/"},
+            {"platform": "Steam", "link": "https://www.google.com/"}
+        ],
+        "details": {
+            "theme": "Exploración y Aventuras",
+            "story": "Adrien estaba emocionado por su nuevo álbum de estampillas del mundial, al hojearlo notó algo extraño, en la contraportada había un mapa de un parque enorme, de repente las paginas empiezan a hojearse solas y un brillo extraño sale de ellas. Ahora Adrien aparece en un mundo extraño, mira a su alrededor y se da cuenta que el lugar en el que está es muy similar al extraño mapa que vio en su álbum; concluyendo que terminó atrapado dentro de este, y ahora, para poder volver a casa Adrien deberá encontrar las estampillas escondidas alrededor de este colorido parque y completar su album.",
+            "artBible": [
+                "/resources/img/Games/WorldPark/art1.jpg",
+                "/resources/img/Games/WorldPark/art2.jpg"
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "title": "World Park",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
+        "shortDescription": "WorldPark es un juego de exploracion y aventuras en el que te sumergiras con Adrien a un parque tematico en el que deberas recolectar tus estampillas para completar tu album",
+        "downloads": [
+            
+        ],
+        "details": {
+            "theme": "Exploración y Aventuras",
+            "story": "Adrien estaba emocionado por su nuevo álbum de estampillas del mundial, al hojearlo notó algo extraño, en la contraportada había un mapa de un parque enorme, de repente las paginas empiezan a hojearse solas y un brillo extraño sale de ellas. Ahora Adrien aparece en un mundo extraño, mira a su alrededor y se da cuenta que el lugar en el que está es muy similar al extraño mapa que vio en su álbum; concluyendo que terminó atrapado dentro de este, y ahora, para poder volver a casa Adrien deberá encontrar las estampillas escondidas alrededor de este colorido parque y completar su album.",
+            "artBible": [
+                "/resources/img/Games/WorldPark/art1.jpg",
+                "/resources/img/Games/WorldPark/art2.jpg"
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "title": "World Park",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
+        "shortDescription": "WorldPark es un juego de exploracion y aventuras en el que te sumergiras con Adrien a un parque tematico en el que deberas recolectar tus estampillas para completar tu album",
+        "downloads": [
+            
+        ],
+        "details": {
+            "theme": "Exploración y Aventuras",
+            "story": "Adrien estaba emocionado por su nuevo álbum de estampillas del mundial, al hojearlo notó algo extraño, en la contraportada había un mapa de un parque enorme, de repente las paginas empiezan a hojearse solas y un brillo extraño sale de ellas. Ahora Adrien aparece en un mundo extraño, mira a su alrededor y se da cuenta que el lugar en el que está es muy similar al extraño mapa que vio en su álbum; concluyendo que terminó atrapado dentro de este, y ahora, para poder volver a casa Adrien deberá encontrar las estampillas escondidas alrededor de este colorido parque y completar su album.",
+            "artBible": [
+                "/resources/img/Games/WorldPark/art1.jpg",
+                "/resources/img/Games/WorldPark/art2.jpg"
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "title": "World Park",
+        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
+        "shortDescription": "WorldPark es un juego de exploracion y aventuras en el que te sumergiras con Adrien a un parque tematico en el que deberas recolectar tus estampillas para completar tu album",
+        "downloads": [
             
         ],
         "details": {

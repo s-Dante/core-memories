@@ -1,83 +1,73 @@
+// components/GamesComponents/InfoGCard.jsx
 import { SDGCard } from '@/components';
 import Link from 'next/link';
 import { varien, varela } from '@/app/layout';
 
+// --- CLASES SIMPLIFICADAS Y RESPONSIVAS ---
+
+// Contenedor principal del artículo
 const articleClasses = `
-    grid items-start
-    gap-y-6 md:gap-y-6 md:gap-x-10
-    grid-cols-1
-    md:grid-cols-[minmax(260px,340px)_minmax(0,640px)]
-    md:justify-between
-    h-[100dvh]
-    pt-50
+    w-full
+    py-5 md:py-0 md:min-h-screen
+    grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16
+    text-center md:text-left
+`;
 
-    
-    md:[&>*:first-child]:col-start-1
-    md:[&>*:first-child]:-rotate-5
-    md:[&>*:first-child]:scale-105
-    md:[&>*:first-child]:hover:rotate-0 transition-ease
-    md:[&>*:first-child]:justify-self-start
-    md:[&>*:not(:first-child)]:col-start-2
-    md:[&>*:not(:first-child)]:justify-self-start
-    md:[&>*:not(:first-child)]:text-left
-    md:[&>*:not(:first-child)]:max-w-[56ch]
+// Contenedor para la tarjeta del juego (SDCard)
+const cardWrapperClasses = `
+    w-full flex justify-center
+    transition-transform duration-300 ease-in-out
+    md:group-even:order-last
+    md:group-even:rotate-3
+    md:-rotate-3
+    md:hover:scale-105
+    md:hover:rotate-0
+`;
 
-    
-    md:[&>h2]:self-start
-    md:[&>p]:mt-3
-    md:[&>div]:mt-4
-
-    
-    even:md:[&>*:first-child]:col-start-2
-    even:md:[&>*:first-child]:rotate-5
-    even:md:[&>*:first-child]:scale-105
-    even;md:[&>*:first-child]:hover:rotate-0 transition-ease
-    even:md:[&>*:first-child]:justify-self-end
-    even:md:[&>*:not(:first-child)]:col-start-1
-    even:md:[&>*:not(:first-child)]:justify-self-end
-    even:md:[&>*:not(:first-child)]:text-right
+// Contenedor para el texto (título, descripción, botones)
+const textWrapClasses = `
+    flex flex-col items-center
+    md:items-start
+    md:group-even:items-end
 `;
 
 const gameTitleClasses = `
     ${varien.className}
-    text-3xl md:text-5xl font-extrabold 
+    text-4xl md:text-5xl font-extrabold 
     uppercase leading-tight text-white
-    tracking-tight mb-2 md:mb-3
+    tracking-tight mb-3 md:mb-4
 `;
 
 const gameDescriptionClasses = `
     ${varela.className}
     text-neutral-200/90
+    max-w-prose // Limita el ancho del texto para mejor legibilidad
+    md:group-even:text-right // Alinea el texto a la derecha para los pares
 `;
 
 const botonesClasses = `
-    mt-4 flex flex-wrap gap-3
+    mt-6 flex flex-wrap gap-3 justify-center md:justify-start
 `;
 
 const linkClasses = `
-    px-4 py-2 rounded-full bg-indigo-600/80
+    px-5 py-2 rounded-full bg-indigo-600/80
     hover:bg-indigo-600 text-white text-sm 
-    md:text-base
+    md:text-base transition-colors
 `;
 
 const noDownloadLinksClasses = `
     text-neutral-400
 `;
 
-const textWrapClasses = `
-  flex flex-col justify-center
-  gap-3 md:gap-4
-  md:col-start-2
-  even:md:col-start-1
-  text-left even:md:text-right
-  max-w-[56ch]
-`;
 
 export default function InfoGCard({ game, id }) {
     return (
-        <article id={id} className={articleClasses}>
+        // Añadimos una clase "group" para poder usar "group-even" en los hijos
+        <article id={id} className={`group ${articleClasses}`}>
 
-            <SDGCard key={game.id} game={game} whereToGo={1} />
+            <div className={cardWrapperClasses}>
+                <SDGCard key={game.id} game={game} whereToGo={1} />
+            </div>
 
             <div className={textWrapClasses}>
                 <h2 className={gameTitleClasses}>{game.title}</h2>
@@ -85,22 +75,24 @@ export default function InfoGCard({ game, id }) {
                 <p className={gameDescriptionClasses}>{game.shortDescription}</p>
 
                 <div className={botonesClasses}>
-                    {game.downloads && Object.keys(game.downloads).length > 0 ? (
-                        Object.entries(game.downloads).map(([platform, link]) =>
-                            link ? (
+                    {/* --- LÓGICA DE BOTONES CORREGIDA --- */}
+                    {game.downloads && Array.isArray(game.downloads) && game.downloads.length > 0 ? (
+                        // Iteramos sobre el array con .map()
+                        game.downloads.map((download, index) =>
+                            download.link ? (
                                 <Link
-                                    key={platform}
-                                    href={link}
+                                    key={index} // Usamos el index como key
+                                    href={download.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={linkClasses}
                                 >
-                                    {platform}
+                                    {download.platform} {/* Usamos download.platform */}
                                 </Link>
                             ) : null
                         )
                     ) : (
-                        <p className={noDownloadLinksClasses}>No hay enlaces de descarga disponibles</p>
+                        <p className={noDownloadLinksClasses}>No hay enlaces de descarga disponibles 🥺</p>
                     )}
                 </div>
             </div>

@@ -10,7 +10,7 @@ export const homeImgs = {
         },
         {
             id: 2,
-            src: generlPath + "hero-fg.png",
+            src: generlPath + "hero-fg2.png",
             alt: generalDescription + " Galaxia mayor"
         },
         {
