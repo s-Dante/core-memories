@@ -25,6 +25,7 @@ const photoClasses = `
     rounded-full object-cover
     mx-auto mb-4
     border-2 border-white/10
+    grayscale
 `;
 
 const nameClasses = `
