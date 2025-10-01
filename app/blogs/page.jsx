@@ -1,62 +1,59 @@
 import { getBlogs } from "@/app/lib";
-import { Folder, FollowUs } from "@/components";
-
+import { Folder } from "@/components";
 
 export const metadata = {
     title: "Blogs | Core Memories",
-    description: "Empresa de videojuegos independiente",
+    description: "Archivos de desarrollo de nuestros proyectos.",
 };
 
-const articleClasses = `
- relative min-h-[70vh]
-        /* fondo texturizado + viñeta */
-        bg-[#0d0d0f]
-        bg-[url('/resources/textures/noise.png')] bg-repeat bg-[length:300px_300px]
-        before:absolute before:inset-0
-        before:bg-[radial-gradient(80%_60%_at_50%_30%,rgba(255,255,255,.08),transparent_60%)]
-      pb-50
+const mainContainerClasses = `
+    min-h-screen
+    bg-zinc-900
 `;
 
-const wraper = `
-  max-w-5xl mx-auto px-6 md:px-10 py-10 md:py-16 flex flex-col items-center gap-6 md:gap-8  
+const wrapperClasses = `
+    px-6 md:px-15 py-24 sm:py-32
 `;
 
-const imgClasses = `
-            w-150 max-w-3xl
-            rounded-md 
-            object-cover
+const titleClasses = `
+    text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-tight text-white 
+    text-center mb-16 sm:mb-20
 `;
 
-const caption = `
-text-center text-neutral-100
-            bg-black/50 backdrop-blur-md
-            rounded-md px-4 py-3
-            max-w-2xl
+const gridClasses = `
+    grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 
+    gap-x-5 gap-y-22
 `;
 
 export default async function Blogs() {
     const blogs = await getBlogs();
 
+    // Verificamos si la respuesta es el objeto completo o solo el array
+    const blogList = Array.isArray(blogs) ? blogs : blogs.blogs;
+
+    if (!blogList || blogList.length === 0) {
+        return (
+            <main className={mainContainerClasses}>
+                <div className={wrapperClasses}>
+                    <h1 className={titleClasses}>Archivos de Blog</h1>
+                    <p className="text-center text-neutral-400">No se encontraron archivos de blog.</p>
+                </div>
+            </main>
+        );
+    }
+    
     return (
-        /*
-        <main>
-            {blogs.map((blog) => (
-                <Folder key={blog.id} blog={blog} />
-            ))}
-        </main>
-        */
-        <article className={articleClasses}>
-            <div className={wraper}>
-                <img
-                    src="/resources/imgs/GeneralImgs/Stickers/PlanetBadgeBordado.png"
-                    alt="Ilustracion para mostrar que actualmente Core Memories no tiene puestos de trabajo disponibles"
-                    className={imgClasses}
-                />
-                <p className={caption}>
-                    Los datos de los blogs se quedaron atorados por Pluton, estamos trabajando en recogerlos.
-                </p>
+        <main className={mainContainerClasses}>
+            <div className={wrapperClasses}>
+                <div className="h-[60px] md:h-[100px]"></div>
+                <h1 className={titleClasses}>Archivos de Blog</h1>
+
+                <div className={gridClasses}>
+                    {blogList.map((blog) => (
+                        <Folder key={blog.id} blog={blog} />
+                    ))}
+                </div>
             </div>
-            <FollowUs />
-        </article>
+        </main>
     );
 }

@@ -19,7 +19,7 @@ const mainContainerClasses = `
 `;
 
 export default async function GameDetailPage({ params }) {
-  const { id } = params;
+  const { id } = await params;
 
   let game;
   try {
