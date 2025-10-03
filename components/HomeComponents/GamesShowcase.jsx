@@ -23,7 +23,7 @@ export default async function GamesShowcase() {
         <section className={sectionClasses}>
             <div className={containerClasses}>
                 {gamesList.map((game) => (
-                    <SDGCard key={game.id} game={game} whereToGo={0} />
+                    <SDGCard key={game.id} game={game} whereToGo={0}/>
                 ))}
             </div>
         </section>

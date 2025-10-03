@@ -1,61 +1,38 @@
-import { getBlogEntryById } from "@/app/lib";
+// app/blogs/[blogID]/[entradaID]/page.jsx
 
-export const metadata = {
-  title: "Blog Entry | Core Memories",
-  description: "Detalles de la entrada del blog en Core Memories",
-};
+import { getBlogEntryById } from "@/app/lib";
+import Link from "next/link";
+import { AlbumTracklist, BlogArticle } from "@/components";
+
+export async function generateMetadata({ params }) {
+    const { blogID, entradaID } = params;
+    const entry = await getBlogEntryById(blogID, entradaID);
+    return {
+        title: `${entry.title} | Core Memories`,
+    };
+}
+
+const mainContainerClasses = `
+    min-h-screen
+    bg-[#0d0d0f]
+    bg-[url('/resources/textures/noise.png')] bg-repeat bg-[length:300px_300px]
+    py-24 sm:py-32 px-4 sm:px-6
+`;
 
 export default async function BlogEntryPage({ params }) {
-  const { blogID, entradaID } = params;
-  const entry = await getBlogEntryById(blogID, entradaID);
+    const { blogID, entradaID } = params;
+    const entry = await getBlogEntryById(blogID, entradaID);
 
-  if (entry.type === "album") {
     return (
-      <section>
-        <h1>{entry.title}</h1>
-        <ul>
-          {entry.tracks.map((track) => (
-            <li key={track.youtubeId}>
-              <a
-                href={`https://www.youtube.com/watch?v=${track.youtubeId}`}
-                target="_blank"
-              >
-                {track.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    );
-  }
+        <main className={mainContainerClasses}>
+            <div className="max-w-4xl mx-auto mb-8">
+                <Link href={`/blogs/${blogID}`} className="text-indigo-400 hover:text-indigo-300">
+                    &larr; Volver a las entradas de {blogID}
+                </Link>
+            </div>
 
-  if (entry.type === "disquete") {
-    return (
-      <section>
-        <h1>{entry.title}</h1>
-        <p>Por: {entry.authors.join(", ")}</p>
-        <div>
-          {entry.content.map((block, i) => {
-            switch (block.type) {
-              case "intro":
-              case "technical":
-              case "notes":
-              case "conclusion":
-              case "finalMessage":
-                return <p key={i}>{block.text}</p>;
-              case "image":
-                return (
-                  <figure key={i}>
-                    <img src={block.src} alt={block.caption} />
-                    <figcaption>{block.caption}</figcaption>
-                  </figure>
-                );
-              default:
-                return null;
-            }
-          })}
-        </div>
-      </section>
+            {entry.type === "album" && <AlbumTracklist entry={entry} />}
+            {entry.type === "disquete" && <BlogArticle entry={entry} />}
+        </main>
     );
-  }
 }
