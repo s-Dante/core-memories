@@ -15,7 +15,7 @@ const mainContainerClasses = `
 
 const wrapperClasses = `
     max-w-screen-xl mx-auto
-    px-6 md:px-10 py-24 sm:py-32
+    px-6 md:px-5 py-11 sm:py-32 pt-30
 `;
 
 const sectionClasses = `

@@ -9,7 +9,10 @@ export default function CD({ entry, blogID }) {
                 <img 
                     src={componentsPath.cd} 
                     alt="Imagen de un CD" 
-                    className="absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out group-hover:-translate-x-[75%] z-10"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[92%] 
+                               transition-transform duration-500 ease-in-out 
+                               group-hover:-translate-y-[100%] 
+                               z-0"
                 />
 
                 {/* La funda/portada del CD */}

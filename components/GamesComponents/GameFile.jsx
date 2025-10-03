@@ -14,7 +14,7 @@ export default function GameFile({ game }) {
 
     return (
         // Contenedor principal del expediente
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full max-w-6xl mx-auto my-24">
             {/* Grid responsivo: 1 columna en móvil, 2 en pantallas grandes (lg) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2">
                 

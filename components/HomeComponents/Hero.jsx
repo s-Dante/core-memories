@@ -19,8 +19,8 @@ const imgBgClasses = `
 
 const imgFgClasses = `
     absolute
-    w-2/3 max-w-lg // Controlamos el ancho en lugar de la altura
-    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 // Centrado perfecto
+    w-lg max-w-xk
+    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
     opacity-95
     pointer-events-none select-none
     z-10
@@ -30,11 +30,10 @@ const textClasses = `
     ${varela.className}
     absolute z-20
     px-6 md:px-12
-    w-full top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-16 // Posicionamiento responsivo
+    w-full top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-16 md:bottom-2/6
     text-right uppercase tracking-tight leading-[0.9]
     drop-shadow-[0_3px_8px_rgba(0,0,0,0.6)]
-    // Tamaños de fuente ajustados para móvil primero
-    text-6xl sm:text-7xl md:text-8xl lg:text-9xl
+    text-6xl sm:text-7xl md:text-8xl lg:text-7xl
 `;
 
 const imgDust = `

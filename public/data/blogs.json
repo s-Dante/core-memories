@@ -8,13 +8,13 @@
                 "id": "devblog-1",
                 "type": "disquete",
                 "tag": "Programación",
-                "title": "Primer prototipo de Dark Woods",
+                "title": "Primer prototipo de Dark Woods a ver que tal",
                 "date": "2025-08-20",
                 "authors": [
                     "Dante Fernández",
                     "Ana López"
                 ],
-                "mainImage": "/images/blog/darkwoods-proto.jpg",
+                "mainImage": "/resources/imgs/GamesImgs/Covers/WorldPark/BlogCover1.png",
                 "content": [
                     {
                         "type": "intro",
@@ -26,7 +26,7 @@
                 "id": "devlog-videos",
                 "type": "album",
                 "title": " Woods Video Devlogs",
-                "cover": "/images/bloDarkg/darkwoods-videos.jpg",
+                "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/BlogCover1.png",
                 "date": "2025-08-22",
                 "tracks": [
                     {

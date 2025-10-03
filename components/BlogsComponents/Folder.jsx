@@ -37,6 +37,18 @@ export default function Folder({ blog }) {
                         alt="Disquete secundario"
                         className="z-2 absolute h-[105px] w-auto -translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-27 group-hover:translate-x-8 group-hover:rotate-[12deg]" 
                     />
+
+                    <img 
+                        src={componentsPath.disqueteFolder} 
+                        alt="Disquete secundario"
+                        className="z-2 absolute h-[105px] w-auto translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-8 group-hover:translate-x-20 group-hover:rotate-[22deg]" 
+                    />
+
+                    <img    
+                        src={componentsPath.disqueteFolder} 
+                        alt="Disquete secundario"
+                        className="z-2 absolute h-[105px] w-auto translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-13 group-hover:-translate-x-18 group-hover:-rotate-[8deg]" 
+                    />
                 </div>
                 
                 <img 
