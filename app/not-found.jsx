@@ -67,6 +67,7 @@ export default function NotFound() {
                     src="/resources/imgs/GeneralImgs/Stickers/AstronautBrockenBordado.png"
                     alt="Astronauta con el casco roto, perdido en el espacio"
                     className={imageClasses}
+                    loading="lazy"  
                 />
                 
                 <h1 className={errorCodeClasses}>404</h1>

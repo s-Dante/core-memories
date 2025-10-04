@@ -15,6 +15,7 @@ export default function Folder({ blog }) {
                     src={componentsPath.folderBack} 
                     alt="Parte trasera de la carpeta"
                     className="absolute inset-0 w-full h-full z-0"
+                    loading="lazy"
                 />
 
                 <div className="absolute inset-0 w-full h-full flex justify-center items-center z-10">
@@ -24,30 +25,35 @@ export default function Folder({ blog }) {
                         src={componentsPath.disqueteFolder} 
                         alt="Disquete principal"
                         className="z-3 h-[105px] w-auto -translate-y-11 transition-transform duration-300 ease-out group-hover:-translate-y-20" 
+                        loading="lazy"
                     />
                     {/* Disquete Izquierdo: se mueve más y rota más */}
                     <img 
                         src={componentsPath.disqueteFolder} 
                         alt="Disquete secundario"
                         className="z-1 absolute h-[105px] w-auto -translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-31 group-hover:-translate-x-5 group-hover:-rotate-[20deg]" 
+                        loading="lazy"
                     />
                     {/* Disquete Derecho: se mueve más y rota más */}
                     <img 
                         src={componentsPath.disqueteFolder} 
                         alt="Disquete secundario"
                         className="z-2 absolute h-[105px] w-auto -translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-27 group-hover:translate-x-8 group-hover:rotate-[12deg]" 
+                        loading="lazy"
                     />
 
                     <img 
                         src={componentsPath.disqueteFolder} 
                         alt="Disquete secundario"
                         className="z-2 absolute h-[105px] w-auto translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-8 group-hover:translate-x-20 group-hover:rotate-[22deg]" 
+                        loading="lazy"
                     />
 
                     <img    
                         src={componentsPath.disqueteFolder} 
                         alt="Disquete secundario"
                         className="z-2 absolute h-[105px] w-auto translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-13 group-hover:-translate-x-18 group-hover:-rotate-[8deg]" 
+                        loading="lazy"
                     />
                 </div>
                 
@@ -55,6 +61,7 @@ export default function Folder({ blog }) {
                     src={componentsPath.folderFront} 
                     alt="Parte delantera de la carpeta"
                     className="absolute inset-0 w-full h-auto translate-y-10 z-20"
+                    loading="lazy"
                 />
 
                 <div className="absolute bottom-4 left-4 z-30">

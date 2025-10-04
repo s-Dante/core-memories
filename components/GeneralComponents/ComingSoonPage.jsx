@@ -41,6 +41,7 @@ export default function ComingSoonPage({ imageUrl, imageAlt, message }) {
                         src={imageUrl} 
                         alt={imageAlt}
                         className={imageClasses}
+                        loading="lazy"
                     />
                 </div>
 
