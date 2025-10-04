@@ -10,7 +10,7 @@ export default function Jobs() {
     
     return (
         <ComingSoonPage 
-            imageUrl="/resources/imgs/GeneralImgs/Stickers/AstronautBrockenBordado.png"
+            imageUrl="/resources/imgs/GeneralImgs/Stickers/SapaceShipBadgeBordado.png"
             imageAlt="Ilustración de un astronauta para indicar que no hay trabajos disponibles"
             message={message}
         />
