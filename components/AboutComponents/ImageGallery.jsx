@@ -1,5 +1,3 @@
-// components/AboutComponents/ImageGallery.jsx
-
 import { aboutImageGallery } from "@/config";
 
 const sectionClasses = `

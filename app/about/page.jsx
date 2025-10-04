@@ -10,7 +10,7 @@ export const metadata = {
 
 const mainClasses = `
     ${varien.className}
-    w-[100dvw] px-6 md:px-10 lg:px-14 space-y-16 sm:space-y-24 py-16
+    w-[100%] px-6 md:px-10 lg:px-14 space-y-16 sm:space-y-24 py-16
     bg-zinc-900
 `;
 
