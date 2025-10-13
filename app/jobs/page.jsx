@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 export default function Jobs() {
-    const message = "Actualmente no hay puestos de trabajo disponibles, pero puedes seguirnos en nuestras redes sociales para estar al tanto de futuras oportunidades.";
+    const message = "Actualmente no tenemos nuevas misiones de reclutamiento. Sin embargo, siempre estamos en busca de nuevos talentos. Mantente al tanto en nuestras redes sociales para futuras vacantes.";
     
     return (
         <ComingSoonPage 

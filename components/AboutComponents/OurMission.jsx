@@ -15,12 +15,11 @@ export default function OurMission() {
             {/* --- FIN DE CAMBIOS --- */}
 
             <div className="relative max-w-3xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">Nuestra Misión</h2>
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">Our Mission</h2>
                 <p className="text-neutral-200 text-lg md:text-xl leading-8">
-                    {/* Reemplaza este Lorem Ipsum con tu texto real */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ratione et illo,
-                    quis quia culpa dolorum consequatur recusandae expedita beatae ipsum tempora dolorem cum,
-                    blanditiis ullam ab, harum accusamus animi!
+                    We want to explore new narratvie and playable horizons.
+                    Searching for develop unique experiencies that makes people conect with the story
+                    and with other players.                    
                 </p>
             </div>
         </section>

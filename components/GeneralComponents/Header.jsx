@@ -33,7 +33,7 @@ const linkClasses = `
     transition-transform
     nav-link
     uppercase
-    text-2xl
+    text-3xl
 `;
 
 export default function Header() {
@@ -52,7 +52,7 @@ export default function Header() {
             </Link>
 
             {/* Navegación para Escritorio */}
-            <nav className="hidden lg:flex items-center space-x-10 text-2xl">
+            <nav className="hidden lg:flex items-center space-x-10">
                 <Link href="/games" className={linkClasses}>Games</Link>
                 <Link href="/about" className={linkClasses}>About</Link>
                 <Link href="/blogs" className={linkClasses}>Blog</Link>
@@ -126,6 +126,7 @@ export default function Header() {
 
 // const logoTextClasses = `
 //     text-4xl leading-8 uppercase hidden sm:inline-block
+//     w-[70%]
 // `;
 
 // const linkClasses = ` 
@@ -133,7 +134,7 @@ export default function Header() {
 //     transition-transform
 //     nav-link
 //     uppercase
-//     text-2xl
+//     text-3xl
 // `;
 
 // export default function Header() {
@@ -174,7 +175,7 @@ export default function Header() {
 //             </Link>
 
 //             {/* Navegación para Escritorio */}
-//             <nav className="hidden lg:flex items-center space-x-10 text-2xl">
+//             <nav className="hidden lg:flex items-center space-x-10 text-4xl">
 //                 <Link href="/games" className={linkClasses}>Games</Link>
 //                 <Link href="/about" className={linkClasses}>About</Link>
 //                 <Link href="/blogs" className={linkClasses}>Blog</Link>
@@ -185,7 +186,7 @@ export default function Header() {
 //             {/* Botón de Menú Móvil */}
 //             <div className="lg:hidden">
 //                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="z-50 relative">
-//                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//                     <svg className="w-15 h-15 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 //                         {isMenuOpen ? (
 //                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
 //                         ) : (

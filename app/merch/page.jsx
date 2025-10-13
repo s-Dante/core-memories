@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default function Merch() {
-    const message = "Actualmente no hay merch para vender, pero puedes apoyar el proyecto siguiéndonos en nuestras redes sociales y compartiendo nuestro contenido con tus amigos.";
+    const message = "Nuestra estación de merch está actualmente en construcción. Estamos diseñando equipo único para nuestras misiones. ¡Vuelve pronto, astronauta!";
 
     return (
         <ComingSoonPage 
