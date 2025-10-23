@@ -13,14 +13,10 @@ const mainClasses = `
   space-y-16 md:space-y-24 
 `;
 
-const separador = `
-  h-[5px]
-  md:hidden
-`;
 
 // --- FIN DE CAMBIOS ---
 
-export default function GamesContent({ games }) {
+export default function GamesContent({ games: gamesData }) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const hash = window.location.hash;
@@ -35,10 +31,13 @@ export default function GamesContent({ games }) {
     }
   }, []);
 
+  const games = Array.isArray(gamesData) ? gamesData : gamesData.games;
+  if (!Array.isArray(games)) {
+    return <main className={mainClasses}><p className="text-white text-center">Error al cargar juegos.</p></main>;
+  }
+
   return (
     <main className={mainClasses}>
-      <div className={separador}></div>
-      <div className={separador}></div>
       {games.map((game) => (
         <InfoGCard key={game.id} game={game} id={`game-${game.id}`} />
       ))}

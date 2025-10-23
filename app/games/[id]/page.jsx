@@ -18,6 +18,7 @@ const mainContainerClasses = `
   p-4 sm:p-6 md:p-10
 `;
 
+
 export default async function GameDetailPage({ params }) {
   const { id } = await params;
 

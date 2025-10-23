@@ -1,39 +1,69 @@
-[
+{
+  "games": [
     {
-        "id": 1,
-        "title": "World Park",
-        "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
-        "shortDescription": "Diviertete explorando y coleccionando las diversas estampillas que el parque tiene para ti.",
-        "details": {
-            "status": "ACTIVO",
-            "location": "Parque Temático World Park",
-            "caseId": "#1121122",
-            "theme": "Exploración y Aventuras",
-            "story": "Adrien estaba emocionado por su nuevo álbum de estampillas del mundial, al hojearlo notó algo extraño, en la contraportada había un mapa de un parque enorme, de repente las paginas empiezan a hojearse solas y un brillo extraño sale de ellas. Ahora Adrien aparece en un mundo extraño, mira a su alrededor y se da cuenta que el lugar en el que está es muy similar al extraño mapa que vio en su álbum; concluyendo que terminó atrapado dentro de este, y ahora, para poder volver a casa Adrien deberá encontrar las estampillas escondidas alrededor de este colorido parque y completar su album.",
-            "gameplay": "Un joven es llevado a un parque donde se exponen las diversas culturas del mundo, ahí deberá  llenar su álbum de estampillas para poder salir de ese mundo.",
-            "character": {
-                "name": "Adrien",
-                "profile": "Un joven entusiasta y coleccionista de estampillas. Es ágil y curioso, pero no tiene habilidades de combate, por lo que debe confiar en su ingenio para superar los obstáculos.",
-                "abilities": [
-                    "Salto y escalada básicos",
-                    "Uso de la 'Lupa de Coleccionista' para revelar secretos",
-                    "Sigilo para esconderse en el entorno"
-                ]
-            },
-            "mapZones": [
-                {
-                    "name": "Bosque Encantado",
-                    "description": "Una zona densa y misteriosa donde las estampillas están ocultas en lo alto de los árboles y en cuevas secretas."
-                },
-                {
-                    "name": "Ciudad Futurista",
-                    "description": "Un área de neón y tecnología donde los acertijos requieren la manipulación de circuitos y terminales."
-                }
-            ],
-            "artBible": [
-                "/resources/img/Games/WorldPark/art1.jpg",
-                "/resources/img/Games/WorldPark/art2.jpg"
-            ]
+      "id": 1,
+      "slug": "world-park",
+      "title": "World Park",
+      "tagline": "Colecciona el mundo, una estampilla a la vez.",
+      "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
+      "gallery": [
+        "/resources/imgs/GamesImgs/Screens/worldpark_01.jpg",
+        "/resources/imgs/GamesImgs/Screens/worldpark_02.jpg" 
+      ],
+      "shortDescription": "Explora zonas inspiradas en culturas de diferentes continentes y monumentos del mundo y reúne estampillas para completar el álbum del mundial de Adrien.",
+      "details": {
+        "status": "ACTIVO",
+        "location": "Parque Temático World Park",
+        "caseId": "#1121122",
+        "theme": "Exploración y Aventuras",
+        "genre": ["Exploración", "Coleccionables", "Ambiental"],
+        "platforms": ["PC", "UE5 (Prototipo)"],
+        "ageRating": "E / A (Todos)",
+        "playtime": "Sesiones cortas (10–20 min por zona)",
+        "story": "Adrien, un coleccionista entusiasta, queda atrapado dentro de World Park: un espacio de zonas temáticas que celebran culturas del mundo. Para volver a su realidad, deberá reunir estampillas únicas vinculadas a monumentos, y hallando rutas ingeniosas en un mundo sin combate.",
+        "gameplay": "Bucle principal: Explorar → visitar monumentos → encontrar estampillas, rutas alternativas, sigilo ligero) → Completar colección, el reto es la observación y el descubrimienyo del entorno.",
+        "coreLoop": [
+          "Explora el entorno y visita puntos de interés en el mapa.",
+          "Obtén la estampilla y el apunte cultural asociado.",
+          "Completa series temáticas para desbloquear la salida de ese mundo."
+        ],
+        "character": {
+          "name": "Adrien",
+          "profile": "Ágil, curioso, pacifista; aprende del mundo a través de su álbum.",
+          "abilities": [
+            "Salto y escalada básicos (con mejoras por zona)"
+          ],
+        "collectibles": {
+          "stampsTotal": 12,
+          "sets": [
+            { "name": "Maravillas Clásicas", "bonus": "Marcadores permanentes en el mapa" }
+          ],
+          "loreCards": true,
+          "educationalNotes": "Cada estampilla incluye curiosidad cultural no intrusiva."
+        },
+            "mechanics": ["encontrar los senderos correctos para cruzar por el mapa", "buscar la estampilla cerca de los monumentos", "completar el mapa"]
+          },
+        "audio": {
+          "style": "Ambient/World en concordancia de cada zona, sutil y relajante",
+          "fx": "Confirmaciones suaves al encontrar cada estampillas"
+        },
+        "uiUx": {
+          "map": "Mapa ligero con marcadores diegéticos",
+          "collectopedia": "Álbum con sets y progreso por zona"
+        }, 
+        "artBible": [ 
+          "/resources/img/Games/WorldPark/art1.jpg",
+          "/resources/img/Games/WorldPark/art2.jpg"
+        ],
+        "links": {
+          "pressKit": "/resources/press/worldpark_kit.zip", 
+          "trailer": "/resources/video/worldpark_trailer.mp4"
         }
+      },
+      "seo": {
+        "keywords": ["World Park", "juego de exploración", "coleccionables", "UE5"],
+        "excerpt": "Explora monumentos del mundo en un parque mágico y completa tu álbum de estampillas."
+      }
     }
-]
+  ]
+}

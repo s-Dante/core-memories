@@ -17,7 +17,8 @@ const containerClasses = `
 `;
 
 export default async function GamesShowcase() {
-    const gamesList = await getGames();
+    const data = await getGames();
+    const gamesList = Array.isArray(data) ? data : data.games;
 
     return (
         <section className={sectionClasses}>
