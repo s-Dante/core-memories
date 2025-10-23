@@ -3,42 +3,6 @@
         "id": "corememories",
         "name": "Core Memories",
         "description": "Devblog oficial de nuestro proyecto Core Memories.",
-        "entries": [
-            {
-                "id": "devblog-1",
-                "type": "disquete",
-                "tag": "Programación",
-                "title": "Primer prototipo de Dark Woods a ver que tal",
-                "date": "2025-08-20",
-                "authors": [
-                    "Dante Fernández",
-                    "Ana López"
-                ],
-                "mainImage": "/resources/imgs/GamesImgs/Covers/WorldPark/BlogCover1.png",
-                "content": [
-                    {
-                        "type": "intro",
-                        "text": "Empezamos el prototipo para Dark Woods con un enfoque en el ambiente del bosque."
-                    }
-                ]
-            },
-            {
-                "id": "devlog-videos",
-                "type": "album",
-                "title": " Woods Video Devlogs",
-                "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/BlogCover1.png",
-                "date": "2025-08-22",
-                "tracks": [
-                    {
-                        "title": "Devlog #1",
-                        "youtubeId": "abcd1234"
-                    },
-                    {
-                        "title": "Devlog #2",
-                        "youtubeId": "efgh5678"
-                    }
-                ]
-            }
-        ]
+        "entries": []
     }
 ]

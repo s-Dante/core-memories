@@ -15,11 +15,12 @@ export default function OurMission() {
             {/* --- FIN DE CAMBIOS --- */}
 
             <div className="relative max-w-3xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">Our Mission</h2>
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">Nuestra Misión</h2>
                 <p className="text-neutral-200 text-lg md:text-xl leading-8">
-                    We want to explore new narratvie and playable horizons.
-                    Searching for develop unique experiencies that makes people conect with the story
-                    and with other players.                    
+                    Queremos explorar los límites de lo que es posible creando experiencias únicas 
+                    mediante las historias que cuentan los videojuegos, tenemos una gran pasión por 
+                    los videojuegos y una inmensa creatividad para crear proyectos por lo que 
+                    queremos compartir esa emoción con otros.                  
                 </p>
             </div>
         </section>

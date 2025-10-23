@@ -67,12 +67,12 @@ export default function Footer() {
               ¿Quieres mostrarlos? Si no, puedes eliminar este <nav>. 
               Los he dejado visibles por ahora.
             */}
-            <nav className={footerNavClasses}>
+            {/* <nav className={footerNavClasses}>
                 <Link href="/privacy">Privacy Policy</Link>
                 <Link href="/terms">Terms of Service</Link>
                 <Link href="/contact">Contact Us</Link>
                 <Link href="/faq">FAQ</Link>
-            </nav>
+            </nav> */}
 
             <p className={footerRights}>© {currentYear} Core Memories. All rights reserved.</p>
         </footer>

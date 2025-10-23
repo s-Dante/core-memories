@@ -3,14 +3,14 @@
         "id": 1,
         "title": "World Park",
         "cover": "/resources/imgs/GamesImgs/Covers/WorldPark/cover.jpg",
-        "shortDescription": "Lorem Ipsum Dolorum Est",
+        "shortDescription": "Diviertete explorando y coleccionando las diversas estampillas que el parque tiene para ti.",
         "details": {
             "status": "ACTIVO",
             "location": "Parque Temático World Park",
-            "caseId": "#1423412",
+            "caseId": "#1121122",
             "theme": "Exploración y Aventuras",
-            "story": "Adrien estaba emocionado por su nuevo álbum...",
-            "gameplay": "El núcleo de la jugabilidad se centra en la exploración de mundo abierto, resolución de acertijos ambientales y la recolección de coleccionables. Los jugadores deberán usar el sigilo para evitar a los 'Guardianes del Parque' en ciertas zonas.",
+            "story": "Adrien estaba emocionado por su nuevo álbum de estampillas del mundial, al hojearlo notó algo extraño, en la contraportada había un mapa de un parque enorme, de repente las paginas empiezan a hojearse solas y un brillo extraño sale de ellas. Ahora Adrien aparece en un mundo extraño, mira a su alrededor y se da cuenta que el lugar en el que está es muy similar al extraño mapa que vio en su álbum; concluyendo que terminó atrapado dentro de este, y ahora, para poder volver a casa Adrien deberá encontrar las estampillas escondidas alrededor de este colorido parque y completar su album.",
+            "gameplay": "Un joven es llevado a un parque donde se exponen las diversas culturas del mundo, ahí deberá  llenar su álbum de estampillas para poder salir de ese mundo.",
             "character": {
                 "name": "Adrien",
                 "profile": "Un joven entusiasta y coleccionista de estampillas. Es ágil y curioso, pero no tiene habilidades de combate, por lo que debe confiar en su ingenio para superar los obstáculos.",

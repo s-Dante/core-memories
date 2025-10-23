@@ -31,7 +31,7 @@ export default function GameFile({ game }) {
                         </div>
                     </div>
                     
-                    <img src={game.cover} alt={`Cover de ${game.title}`} className="w-full mb-8 shadow-md" />
+                    <img src={game.cover} alt={`Cover de ${game.title}`} className="w-[50%] mb-8 align-center shadow-md" />
 
                     <div className="mb-6">
                         <h2 className={sectionTitleClasses}>Temática</h2>
