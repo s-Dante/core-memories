@@ -1,4 +1,4 @@
-import { Rubik, Varela } from "next/font/google";
+import { Rubik, Varela, Courier_Prime } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components";
 import localFont from "next/font/local";
@@ -19,8 +19,14 @@ export const varela = Varela({
   weight: "400"
 });
 
+export const courier = Courier_Prime({
+  variable: "--font-courier",
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
+
 const bodyClasses = `
-  ${varela.className} ${rubik.className} ${varien.className}
+  ${varela.className} ${rubik.className} ${varien.className} ${courier.variable}
   antialiased 
   scrollbar
   min-h-screen
@@ -34,7 +40,7 @@ export default function RootLayout({ children }) {
         <Header />
 
         {children}
-        
+
         <Footer />
       </body>
     </html>

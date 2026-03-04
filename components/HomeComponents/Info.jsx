@@ -12,27 +12,23 @@ const sectionClasses = `
 const phraseClasses = `
     ${varien.className}
     uppercase tracking-tight
-    text-6xl sm:text-7xl md:text-8xl lg:text-[9rem]
+    text-4xl sm:text-6xl md:text-7xl lg:text-[8rem]
     leading-none
     max-w-7xl
 `;
 
 const checkClasses = `
     ${rubik.className}
-    text-4xl sm:text-5xl opacity-90
-    uppercase font-bold
+    text-2xl sm:text-4xl md:text-5xl opacity-90
+    uppercase font-bold text-center sm:text-left
 `;
 
-// --- INICIO DE CAMBIOS ---
 const arrowContainerClasses = `
-    flex flex-col items-center self-center // Por defecto (móvil): columna y centrado en el eje X
-    sm:flex-row sm:self-start sm:items-center sm:gap-6 // En pantallas 'sm' y mayores: fila, alineado a la izquierda y con un espacio
+    flex flex-col items-center self-center sm:flex-row sm:self-start sm:items-center sm:gap-6 mt-12 sm:mt-0
 `;
-// --- FIN DE CAMBIOS ---
 
 const arrowClasses = `
-    h-10 w-auto animate-bounce
-    mt-4 sm:mt-0 // Añadimos un margen superior solo en móvil
+    h-8 sm:h-10 w-auto animate-bounce mt-4 sm:mt-0
 `;
 
 

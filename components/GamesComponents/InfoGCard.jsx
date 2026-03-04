@@ -1,100 +1,73 @@
 // components/GamesComponents/InfoGCard.jsx
-import { SDGCard } from '@/components';
 import Link from 'next/link';
-import { varien, varela } from '@/app/layout';
-
-// --- CLASES SIMPLIFICADAS Y RESPONSIVAS ---
-
-// Contenedor principal del artículo
-const articleClasses = `
-    w-full
-    py-5 md:py-0 md:min-h-screen
-    grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16
-    text-center md:text-left
-`;
-
-// Contenedor para la tarjeta del juego (SDCard)
-const cardWrapperClasses = `
-    w-full flex justify-center
-    transition-transform duration-300 ease-in-out
-    md:group-even:order-last
-    md:group-even:rotate-3
-    md:-rotate-3
-    md:hover:scale-105
-    md:hover:rotate-0
-`;
-
-// Contenedor para el texto (título, descripción, botones)
-const textWrapClasses = `
-    flex flex-col items-center
-    md:items-start
-    md:group-even:items-end
-`;
-
-const gameTitleClasses = `
-    ${varien.className}
-    text-4xl md:text-5xl font-extrabold 
-    uppercase leading-tight text-white
-    tracking-tight mb-3 md:mb-4
-`;
-
-const gameDescriptionClasses = `
-    ${varela.className}
-    text-neutral-200/90
-    max-w-prose // Limita el ancho del texto para mejor legibilidad
-    md:group-even:text-right // Alinea el texto a la derecha para los pares
-`;
-
-const botonesClasses = `
-    mt-6 flex flex-wrap gap-3 justify-center md:justify-start
-`;
-
-const linkClasses = `
-    px-5 py-2 rounded-full bg-indigo-600/80
-    hover:bg-indigo-600 text-white text-sm 
-    md:text-base transition-colors
-`;
-
-const noDownloadLinksClasses = `
-    text-neutral-400
-`;
-
+import Image from 'next/image';
 
 export default function InfoGCard({ game, id }) {
+    // Generate the path to the details page
+    const detailsPath = `/games/${game.id}`;
+
     return (
-        // Añadimos una clase "group" para poder usar "group-even" en los hijos
-        <article id={id} className={`group ${articleClasses}`}>
+        <article id={id} className="w-full py-8 md:py-16 group">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative">
 
-            <div className={cardWrapperClasses}>
-                <SDGCard key={game.id} game={game} whereToGo={1} />
-            </div>
+                {/* Visual Representation (Dossier Preview) */}
+                <div className="w-full md:w-1/2 flex justify-center md:group-even:order-last">
+                    <Link href={detailsPath} className="block relative w-full max-w-[400px] aspect-[4/3] group/folder transition-transform duration-500 hover:scale-105">
+                        {/* Background File Tab */}
+                        <div className="absolute top-0 left-4 w-32 h-10 bg-[#cca876] rounded-t-lg border-2 border-amber-900/40 border-b-0 shadow-inner rotate-[-3deg] z-0 -mt-8 flex items-end pb-1 px-3">
+                            <span className="font-mono text-xs font-bold text-amber-950/80">ID: {game.id.substring(0, 6).toUpperCase()}</span>
+                        </div>
 
-            <div className={textWrapClasses}>
-                <h2 className={gameTitleClasses}>{game.title}</h2>
+                        {/* Main Folder Body */}
+                        <div className="absolute inset-0 bg-[#e1c699] rounded-xl border-2 border-amber-900/30 shadow-xl overflow-hidden z-10 flex p-4 pb-6 transition-all duration-300 group-hover/folder:bg-[#e6ceb1]">
+                            <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-[url('/resources/textures/noise.png')]"></div>
 
-                <p className={gameDescriptionClasses}>{game.shortDescription}</p>
+                            {/* Pinned Photo inside preview */}
+                            <div className="w-1/2 h-full bg-white p-2 shadow-md rotate-[-2deg] relative">
+                                <div className="w-full h-full bg-gray-300 relative overflow-hidden">
+                                    <Image src={game.coverImage} alt={game.title} fill className="object-cover" unoptimized />
+                                </div>
+                                {/* Tape */}
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-white/60 border border-white/20 shadow-sm rotate-3 mix-blend-overlay"></div>
+                            </div>
 
-                <div className={botonesClasses}>
-                    {/* --- LÓGICA DE BOTONES CORREGIDA --- */}
-                    {game.downloads && Array.isArray(game.downloads) && game.downloads.length > 0 ? (
-                        // Iteramos sobre el array con .map()
-                        game.downloads.map((download, index) =>
-                            download.link ? (
-                                <Link
-                                    key={index} // Usamos el index como key
-                                    href={download.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={linkClasses}
-                                >
-                                    {download.platform} {/* Usamos download.platform */}
-                                </Link>
-                            ) : null
-                        )
-                    ) : (
-                        <p className={noDownloadLinksClasses}>No hay enlaces de descarga disponibles 🥺</p>
-                    )}
+                            {/* Preview Text inside folder */}
+                            <div className="w-1/2 pl-4 flex flex-col justify-center">
+                                <div className="border-b-2 border-red-800/20 mb-2 pb-1">
+                                    <span className="text-red-700/80 font-bold font-serif text-sm tracking-widest uppercase block">Classified</span>
+                                </div>
+                                <span className="font-mono text-xs text-amber-900/70 line-clamp-6 leading-relaxed">
+                                    {game.shortDescription}
+                                </span>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
+
+                {/* Text Content next to dossier */}
+                <div className="w-full md:w-1/2 flex flex-col items-center md:items-start md:group-even:items-end text-center md:text-left text-white">
+                    <div className="mb-2">
+                        <span className="bg-red-600 font-bold text-xs uppercase px-2 py-1 tracking-wider">{game.status}</span>
+                    </div>
+
+                    <Link href={detailsPath} className="hover:text-amber-500 transition-colors">
+                        <h2 className="text-4xl md:text-5xl font-sans font-black uppercase tracking-tighter mb-4">
+                            {game.title}
+                        </h2>
+                    </Link>
+
+                    <p className="text-zinc-400 font-mono text-sm max-w-md mb-6 md:group-even:text-right">
+                        {game.shortDescription}
+                    </p>
+
+                    <Link
+                        href={detailsPath}
+                        className="font-mono font-bold tracking-widest uppercase border-b-2 border-red-600 pb-1 hover:text-red-500 hover:border-red-500 transition-colors inline-block"
+                    >
+                        Access File {'>'}
+                    </Link>
+                </div>
+
             </div>
         </article>
     );

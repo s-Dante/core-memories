@@ -1,160 +1,101 @@
-// app/games/[id]/GameFile.jsx
-"use client";
+import React from 'react';
+import Image from 'next/image';
 
-import { useState } from 'react';
-import { CensoredBar, StackedImageGallery } from "@/components"; // Importamos la galería
-import { varela } from "@/app/layout";
-
-// --- Estilos Base ---
-const filePaperClasses = "bg-stone-100/95 shadow-lg text-stone-800 p-8 min-h-[80vh] flex flex-col"; // Flex col para layout interno
-const sectionTitleClasses = "font-bold text-sm uppercase text-stone-500 tracking-widest mb-2 mt-6 first:mt-0";
-const paragraphClasses = "text-stone-700 leading-relaxed";
-const listClasses = "list-disc list-inside space-y-1 mt-2 pl-2 text-sm text-stone-600";
-const buttonNavClasses = "mt-8 text-center text-sm font-bold uppercase tracking-wider text-indigo-600 hover:text-indigo-800 transition-colors";
-
-// --- Componente de Página Individual ---
-// Recibe una porción de los detalles del juego y los renderiza
-const GameFilePage = ({ game, pageDetails, pageNumber }) => {
+const GameFile = ({ game }) => {
     return (
-        <div className='my-25'>
-            <div className={`${filePaperClasses} page-${pageNumber}`}>
-                {/* Contenido específico de cada página */}
-                {pageDetails.map((detailKey, index) => (
-                    <div key={index}>
-                        {detailKey === 'header' && (
-                            <>
-                                <div className="flex justify-between items-start mb-8">
-                                    <div>
-                                        <h1 className="text-3xl font-bold uppercase tracking-wider">{game.title}</h1>
-                                        <p className="text-sm font-mono text-stone-600">ID: {game.details.caseId || <CensoredBar />}</p>
-                                    </div>
-                                    <div className="text-right">
-                                        <p className="text-xs text-stone-500">STATUS</p>
-                                        <p className="font-bold text-green-600">{game.details.status || "CONFIDENCIAL"}</p>
-                                    </div>
-                                </div>
-                                <img src={game.cover} alt={`Cover de ${game.title}`} className="w-50 mb-8 shadow-md" loading="lazy" />
-                            </>
-                        )}
-                        {detailKey === 'theme' && game.details.theme && (
-                            <div><h2 className={sectionTitleClasses}>Temática</h2><p className={paragraphClasses}>{game.details.theme}</p></div>
-                        )}
-                        {detailKey === 'tagline' && game.tagline && (
-                            <div><h2 className={sectionTitleClasses}>Lema</h2><p className={`${paragraphClasses} italic`}>{game.tagline}</p></div>
-                        )}
-                        {detailKey === 'story' && game.details.story && (
-                            <div><h2 className={sectionTitleClasses}>Historia</h2><p className={paragraphClasses}>{game.details.story}</p><CensoredBar /></div>
-                        )}
-                        {detailKey === 'gallery' && game.gallery && game.gallery.length > 0 && (
-                            <div><h2 className={sectionTitleClasses}>Galería de Campo</h2><StackedImageGallery images={game.gallery} /></div>
-                        )}
-                        {detailKey === 'gameplay' && game.details.gameplay && (
-                            <div><h2 className={sectionTitleClasses}>Análisis de Jugabilidad</h2><p className={paragraphClasses}>{game.details.gameplay}</p></div>
-                        )}
-                        {detailKey === 'coreLoop' && game.details.coreLoop && game.details.coreLoop.length > 0 && (
-                            <div><h2 className={sectionTitleClasses}>Ciclo de Juego Principal</h2><ul className={listClasses}>{game.details.coreLoop.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
-                        )}
-                        {detailKey === 'character' && game.details.character && (
-                            <div>
-                                <h2 className={sectionTitleClasses}>Perfil del Sujeto: {game.details.character.name}</h2>
-                                <p className={paragraphClasses}>{game.details.character.profile}</p>
-                                <h3 className="font-semibold text-stone-600 mt-2">Habilidades:</h3>
-                                <ul className={listClasses}>{game.details.character.abilities?.map((ability, i) => <li key={i}>{ability}</li>)}</ul>
-                                <h3 className="font-semibold text-stone-600 mt-2">Progresión:</h3>
-                                <p className="text-sm text-stone-600">{game.details.character.progression}</p>
+        <div className="w-full max-w-4xl mx-auto relative mt-20 mb-20">
+
+            {/* Background Folder Tab */}
+            <div className="absolute -top-12 left-0 w-64 h-16 bg-[#e1c699] rounded-t-xl border-t-2 border-l-2 border-r-2 border-amber-800/20 shadow-[inset_0_4px_6px_rgba(0,0,0,0.1)] -z-10" />
+            <div className="absolute -top-8 left-6 text-amber-900/60 font-mono text-xl font-bold tracking-widest uppercase rotate-[-2deg]">
+                FILE: {game.id.substring(0, 8)}
+            </div>
+
+            {/* Main Manila Folder */}
+            <div className="bg-[#e1c699] p-8 md:p-12 rounded-b-xl rounded-tr-xl shadow-2xl relative border-2 border-amber-800/20 w-full overflow-hidden">
+
+                {/* Grime/Texture Overlay (Optional CSS approach) */}
+                <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-multiply bg-[url('/resources/textures/noise.png')]"></div>
+
+                {/* Top Secret Stamp */}
+                <div className="absolute top-8 right-8 text-red-700/80 border-4 border-red-700/80 font-bold text-4xl uppercase p-2 tracking-widest rotate-[15deg] select-none shadow-sm font-serif">
+                    TOP SECRET
+                </div>
+
+                {/* Paper Content Wrapper */}
+                <div className="bg-[#f4f1ea] w-full min-h-[600px] mt-8 p-10 shadow-md relative font-mono text-gray-800 leading-relaxed max-w-3xl mx-auto">
+
+                    {/* Paper lines overlay */}
+                    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_95%,rgba(0,0,0,0.05)_100%)] bg-[length:100%_2rem]"></div>
+
+                    <div className="relative z-10 space-y-8">
+                        {/* Header section */}
+                        <div className="border-b-2 border-gray-400 pb-4 mb-8">
+                            <h1 className="text-4xl font-bold mb-4 uppercase tracking-tighter">
+                                SUBJECT: <span className="font-sans font-black">{game.title}</span>
+                            </h1>
+                            <div className="grid grid-cols-2 gap-4 text-sm font-bold">
+                                <p>STATUS: <span className="text-red-600 bg-red-100 px-2 py-1">{game.status}</span></p>
+                                <p>ETA: {game.releaseDate}</p>
+                                <p>ENGINE: {game.engine}</p>
+                                <p>GENRE: {game.genre.join(', ')}</p>
                             </div>
-                        )}
-                        {detailKey === 'mapZones' && game.details.mapZones && game.details.mapZones.length > 0 && (
-                            <div>
-                                <h2 className={sectionTitleClasses}>Análisis de Zonas</h2>
-                                <div className="space-y-4">
-                                    {game.details.mapZones.map((zone, i) => (
-                                        <div key={i}>
-                                            <h3 className="font-bold text-stone-700">{zone.name}</h3>
-                                            <p className="text-sm text-stone-600">{zone.description}</p>
-                                            <ul className="text-xs text-stone-500 list-disc list-inside pl-2">
-                                                {zone.landmarks && <li>Puntos Clave: {zone.landmarks.join(', ')}</li>}
-                                                {zone.mechanics && <li>Mecánicas: {zone.mechanics.join(', ')}</li>}
-                                            </ul>
-                                        </div>
-                                    ))}
-                                </div>
+                        </div>
+
+                        {/* Polaroid Cover Image */}
+                        <div className="float-right ml-6 mb-6 w-64 bg-white p-3 pb-12 shadow-lg rotate-[-3deg] relative z-20 transition-transform hover:scale-105 hover:rotate-0 duration-300">
+                            <div className="aspect-[3/4] bg-gray-200 relative overflow-hidden">
+                                <Image
+                                    src={game.coverImage}
+                                    alt={game.title}
+                                    fill
+                                    className="object-cover"
+                                    unoptimized // Removing optimization for local dummy data unless images exist
+                                />
                             </div>
-                        )}
-                        {/* Añade más casos para renderizar otras claves de 'details' según necesites */}
+                            <p className="absolute bottom-4 left-0 w-full text-center font-handwriting text-gray-700 text-xl font-bold">Exhibit A</p>
+                            {/* Tape */}
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-8 bg-white/50 border border-white/20 shadow-sm rotate-[-5deg] mix-blend-overlay"></div>
+                        </div>
+
+                        {/* Description Body */}
+                        <div>
+                            <h2 className="text-xl font-bold border-b border-gray-400 inline-block mb-3">OVERVIEW LOG</h2>
+                            <p className="whitespace-pre-wrap">{game.description}</p>
+                        </div>
+
+                        {/* Key Features (Redacted style optionally) */}
+                        <div className="clear-both pt-4">
+                            <h2 className="text-xl font-bold border-b border-gray-400 inline-block mb-3">KNOWN CAPABILITIES</h2>
+                            <ul className="list-disc pl-6 space-y-2">
+                                {game.features.map((feature, idx) => (
+                                    <li key={idx} className="relative group">
+                                        {/* Try hovering over the redacted text! */}
+                                        <span className="bg-black text-black group-hover:bg-transparent group-hover:text-inherit transition-colors duration-300 select-none group-hover:select-auto cursor-help px-1 -mx-1">
+                                            {feature}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Assigned Operatives */}
+                        <div className="pt-8">
+                            <h2 className="text-xl font-bold border-b border-gray-400 inline-block mb-3">ASSIGNED OPERATIVES</h2>
+                            <div className="flex flex-wrap gap-2">
+                                {game.team.map((member, idx) => (
+                                    <span key={idx} className="bg-gray-200 px-3 py-1 font-bold font-sans uppercase text-sm border border-gray-400">
+                                        {member.replace('-', ' ')}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
                     </div>
-                ))}
+                </div>
             </div>
         </div>
     );
 };
 
-// --- Componente Principal que Maneja la Paginación ---
-export default function GameFile({ game }) {
-    const [currentPageIndex, setCurrentPageIndex] = useState(0);
-
-    // --- Lógica de Paginación ---
-    // Define qué secciones van en cada par de páginas (o en cada página en móvil)
-    // Puedes ajustar esto según cuánto contenido quieras por página
-    const pageContentStructure = [
-        ['header', 'tagline', 'theme', 'story'],           // Página 1
-        ['gallery', 'gameplay'],                            // Página 2
-        ['coreLoop', 'character'],                          // Página 3
-        ['mapZones'],                                      // Página 4
-        // Añade más arrays para más páginas si es necesario
-    ];
-
-    const totalPages = pageContentStructure.length;
-
-    // Calculamos el índice del par de páginas actual para escritorio
-    const currentSpreadIndex = Math.floor(currentPageIndex / 2);
-
-    const goToNextPage = () => {
-        setCurrentPageIndex(prev => Math.min(prev + 1, totalPages - 1));
-    };
-    const goToPrevPage = () => {
-        setCurrentPageIndex(prev => Math.max(prev - 1, 0));
-    };
-    const goToNextSpread = () => {
-        setCurrentPageIndex(prev => Math.min(prev + 2, totalPages - 1));
-    };
-    const goToPrevSpread = () => {
-        setCurrentPageIndex(prev => Math.max(prev - 2, 0));
-    };
-
-
-    return (
-        <div className={`w-full max-w-6xl mx-auto ${varela.className}`}>
-            {/* --- Vista Móvil (Scroll Vertical) --- */}
-            <div className="lg:hidden flex flex-col gap-2">
-                {pageContentStructure.map((pageDetails, index) => (
-                    <GameFilePage key={index} game={game} pageDetails={pageDetails} pageNumber={index + 1} />
-                ))}
-            </div>
-
-            {/* --- Vista Escritorio (Paginación Doble) --- */}
-            <div className="hidden lg:grid grid-cols-2 gap-2 relative">
-                {/* Página Izquierda */}
-                {pageContentStructure[currentSpreadIndex * 2] && (
-                    <GameFilePage game={game} pageDetails={pageContentStructure[currentSpreadIndex * 2]} pageNumber={currentSpreadIndex * 2 + 1} />
-                )}
-                {/* Página Derecha (o placeholder si no hay) */}
-                {pageContentStructure[currentSpreadIndex * 2 + 1] ? (
-                    <GameFilePage game={game} pageDetails={pageContentStructure[currentSpreadIndex * 2 + 1]} pageNumber={currentSpreadIndex * 2 + 2} />
-                ) : (
-                    <div className={`${filePaperClasses} bg-stone-200/50`}> {/* Página en blanco */} </div>
-                )}
-
-                {/* Botones de Navegación Escritorio */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-8 z-20">
-                    {currentSpreadIndex > 0 && (
-                        <button onClick={goToPrevSpread} className={buttonNavClasses}>&larr; Anterior</button>
-                    )}
-                    {currentSpreadIndex * 2 + 2 < totalPages && (
-                        <button onClick={goToNextSpread} className={buttonNavClasses}>Siguiente &rarr;</button>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
-}
+export default GameFile;

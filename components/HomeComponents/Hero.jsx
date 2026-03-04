@@ -29,11 +29,11 @@ const imgFgClasses = `
 const textClasses = `
     ${varela.className}
     absolute z-20
-    px-6 md:px-12
-    w-full top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-16 md:bottom-2/6
+    px-4 sm:px-6 md:px-12
+    w-full top-[40%] sm:top-auto sm:translate-y-0 sm:bottom-16 md:bottom-[20%]
     text-right uppercase tracking-tight leading-[0.9]
     drop-shadow-[0_3px_8px_rgba(0,0,0,0.6)]
-    text-6xl sm:text-7xl md:text-8xl lg:text-7xl
+    text-5xl sm:text-7xl md:text-8xl lg:text-[7rem]
 `;
 
 const imgDust = `

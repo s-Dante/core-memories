@@ -1,77 +1,33 @@
 // components/BlogsComponents/Folder.jsx
-
 import Link from "next/link";
-import { componentsPath } from "@/config";
-import { rubik } from "@/app/layout";
+import Image from "next/image";
 
-export default function Folder({ blog }) {
+export default function Folder({ game }) {
     return (
-        // --- INICIO DE CAMBIOS ---
-        // 1. Reducimos el tamaño máximo de 'xs' (20rem) a '72' (18rem) para que sea un poco más compacto en escritorio.
-        <article className="group relative w-full max-w-72 mx-auto aspect-[4/3] cursor-pointer">
-            <Link href={`/blogs/${blog.id}`} className="block w-full h-full">
-                
-                <img 
-                    src={componentsPath.folderBack} 
-                    alt="Parte trasera de la carpeta"
-                    className="absolute inset-0 w-full h-full z-0"
-                    loading="lazy"
-                />
+        <Link href={`/blogs/${game.id}`} className="group relative flex flex-col items-center gap-2 w-28 p-2 rounded hover:bg-blue-900/50 hover:bg-blend-overlay cursor-pointer transition-colors outline-none focus:bg-blue-900/50 active:scale-95">
+            {/* Retro Folder Icon SVG structure */}
+            <div className="w-16 h-12 relative flex justify-center items-end drop-shadow-md group-hover:drop-shadow-lg transition-transform duration-200 group-hover:-translate-y-1">
+                {/* Back flap */}
+                <div className="absolute bottom-0 w-full h-10 bg-[#eebb66] border border-black shadow-inner"></div>
+                {/* Tab */}
+                <div className="absolute bottom-10 left-0 w-6 h-3 bg-[#eebb66] border-t border-l border-r border-black"></div>
 
-                <div className="absolute inset-0 w-full h-full flex justify-center items-center z-10">
-                    {/* 2. Aumentamos la animación para que sea más notoria */}
-                    {/* Disquete Central: se mueve más hacia arriba */}
-                    <img 
-                        src={componentsPath.disqueteFolder} 
-                        alt="Disquete principal"
-                        className="z-3 h-[105px] w-auto -translate-y-11 transition-transform duration-300 ease-out group-hover:-translate-y-20" 
-                        loading="lazy"
-                    />
-                    {/* Disquete Izquierdo: se mueve más y rota más */}
-                    <img 
-                        src={componentsPath.disqueteFolder} 
-                        alt="Disquete secundario"
-                        className="z-1 absolute h-[105px] w-auto -translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-31 group-hover:-translate-x-5 group-hover:-rotate-[20deg]" 
-                        loading="lazy"
-                    />
-                    {/* Disquete Derecho: se mueve más y rota más */}
-                    <img 
-                        src={componentsPath.disqueteFolder} 
-                        alt="Disquete secundario"
-                        className="z-2 absolute h-[105px] w-auto -translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-27 group-hover:translate-x-8 group-hover:rotate-[12deg]" 
-                        loading="lazy"
-                    />
-
-                    <img 
-                        src={componentsPath.disqueteFolder} 
-                        alt="Disquete secundario"
-                        className="z-2 absolute h-[105px] w-auto translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-8 group-hover:translate-x-20 group-hover:rotate-[22deg]" 
-                        loading="lazy"
-                    />
-
-                    <img    
-                        src={componentsPath.disqueteFolder} 
-                        alt="Disquete secundario"
-                        className="z-2 absolute h-[105px] w-auto translate-y-11 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-y-13 group-hover:-translate-x-18 group-hover:-rotate-[8deg]" 
-                        loading="lazy"
-                    />
-                </div>
-                
-                <img 
-                    src={componentsPath.folderFront} 
-                    alt="Parte delantera de la carpeta"
-                    className="absolute inset-0 w-full h-auto translate-y-10 z-20"
-                    loading="lazy"
-                />
-
-                <div className="absolute bottom-4 left-4 z-30">
-                    <h3 className={`${rubik.className} text-2xl font-bold text-white uppercase`}>
-                        {blog.name}
-                    </h3>
+                {/* Internal Document Hint */}
+                <div className="absolute bottom-1 left-2 w-10 h-10 bg-white border border-gray-400 shadow-sm opacity-0 -translate-y-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 transform rotate-[-5deg]">
+                    {/* Fake text lines */}
+                    <div className="w-6 h-0.5 bg-gray-300 mt-2 mx-1"></div>
+                    <div className="w-8 h-0.5 bg-gray-300 mt-1 mx-1"></div>
+                    <div className="w-5 h-0.5 bg-gray-300 mt-1 mx-1"></div>
                 </div>
 
-            </Link>
-        </article>
-        // --- FIN DE CAMBIOS ---
+                {/* Front flap */}
+                <div className="absolute bottom-0 w-full h-9 bg-[#ffcc66] border border-black shadow-[inset_1px_1px_rgba(255,255,255,0.5)] transform -skew-x-[8deg] origin-bottom px-1"></div>
+            </div>
+
+            {/* Label */}
+            <span className="text-white bg-blue-900/0 group-hover:bg-blue-900 px-1 font-sans text-xs text-center border border-transparent group-hover:border-dotted group-hover:border-white leading-tight break-words hyphens-auto max-w-full">
+                {game.title.replace(' ', '_')}
+            </span>
+        </Link>
     );
 }
