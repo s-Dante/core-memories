@@ -1,5 +1,5 @@
 import { getAllGames } from "@/data/games";
-import { Folder } from "@/components";
+import { Folder, SDGCard } from "@/components";
 
 export const metadata = {
     title: "Blogs | Core Memories",
@@ -23,9 +23,23 @@ export default function Blogs() {
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 gap-y-12 justify-items-center">
                     {games.map((game) => (
-                        <Folder key={game.id} game={game} />
+                        <div key={game.id} className="w-36 sm:w-44">
+                            {/* We don't pass href here to avoid nested links, the SD card or another logic handles click, 
+                                but actually for Blogs the expected destination is `/blogs/${game.id}`. 
+                                We should just make Folder the link, and disable SDGCard link if possible. 
+                                Since SDGCard always has a link in this codebase, we will pass href to Folder
+                                BUT we will wrap the SDGCard in a pointer-events-none to prevent nested links! */}
+                            <Folder
+                                title={game.title.replace(" ", "<br/>")}
+                                href={`/blogs/${game.id}`}
+                            >
+                                <div className="transform scale-[0.35] sm:scale-[0.4] origin-bottom sm:origin-bottom translate-y-6 sm:translate-y-8 pointer-events-none">
+                                    <SDGCard game={{ ...game, coverImage: "" }} whereToGo={1} />
+                                </div>
+                            </Folder>
+                        </div>
                     ))}
                 </div>
             </div>
