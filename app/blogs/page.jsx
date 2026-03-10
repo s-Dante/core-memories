@@ -1,5 +1,6 @@
 import { getAllGames } from "@/data/games";
-import { Folder, SDGCard } from "@/components";
+import { Folder } from "@/components/GeneralComponents";
+import { AnimatedFloppies } from "@/components/BlogsComponents";
 
 export const metadata = {
     title: "Blogs | Core Memories",
@@ -11,49 +12,35 @@ export default function Blogs() {
     const games = getAllGames();
 
     return (
-        <main className="min-h-screen bg-[#008080] p-8 md:p-16 relative overflow-hidden font-sans">
-            {/* Retro Windows 95 Desktop pattern maybe? */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-[url('/resources/textures/noise.png')] z-0"></div>
+        <div className="pt-32 pb-20 bg-[#0a0a0a] min-h-screen selection:bg-white selection:text-black">
+            {/* Very subtle ambient noise */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-screen bg-[url('/resources/textures/noise.png')]"></div>
 
-            <div className="relative z-10 max-w-7xl mx-auto">
-                <div className="mb-12 bg-[#c0c0c0] border-t-2 border-l-2 border-white border-b-2 border-r-2 border-r-gray-800 border-b-gray-800 p-2 inline-block shadow-md">
-                    <h1 className="text-2xl font-bold text-black flex items-center gap-2 px-4 py-1">
-                        <span className="w-4 h-4 bg-blue-900 inline-block mr-2"></span>
-                        C:\CORE_MEMORIES\ARCHIVES
-                    </h1>
-                </div>
+            <div className="max-w-screen-xl mx-auto px-6 mb-16 relative z-10 text-center md:text-left">
+                <h1 className="text-5xl md:text-7xl font-sans font-black text-white tracking-tighter mb-4 leading-none">
+                    DEVELOPER LOGS
+                </h1>
+                <p className="text-zinc-500 font-sans text-lg md:text-xl max-w-2xl">
+                    Archived notes, updates, and deep dives into our development process.
+                </p>
+            </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 gap-y-12 justify-items-center">
+            <main className="max-w-screen-xl mx-auto px-6 md:px-10 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14 justify-items-center">
                     {games.map((game) => (
-                        <div key={game.id} className="w-36 sm:w-44">
-                            {/* We don't pass href here to avoid nested links, the SD card or another logic handles click, 
-                                but actually for Blogs the expected destination is `/blogs/${game.id}`. 
-                                We should just make Folder the link, and disable SDGCard link if possible. 
-                                Since SDGCard always has a link in this codebase, we will pass href to Folder
-                                BUT we will wrap the SDGCard in a pointer-events-none to prevent nested links! */}
+                        <div key={game.id} className="w-full max-w-[360px]">
                             <Folder
                                 title={game.title.replace(" ", "<br/>")}
                                 href={`/blogs/${game.id}`}
                             >
-                                <div className="transform scale-[0.35] sm:scale-[0.4] origin-bottom sm:origin-bottom translate-y-6 sm:translate-y-8 pointer-events-none">
-                                    <SDGCard game={{ ...game, coverImage: "" }} whereToGo={1} />
+                                <div className="w-full h-full flex items-center justify-center translate-y-0 pointer-events-none">
+                                    <AnimatedFloppies />
                                 </div>
                             </Folder>
                         </div>
                     ))}
                 </div>
-            </div>
-
-            {/* Fake Taskbar */}
-            <div className="fixed bottom-0 left-0 w-full h-10 bg-[#c0c0c0] border-t-2 border-white flex items-center px-2 z-50">
-                <div className="bg-[#c0c0c0] border-t border-l border-white border-b border-r border-[#808080] shadow-[1px_1px_black] font-bold px-3 py-1 flex items-center cursor-pointer text-sm">
-                    <span className="mr-2 text-black font-black">▶</span> Start
-                </div>
-                <div className="mx-4 h-full border-l border-[#808080] border-r border-white w-[2px]"></div>
-                <div className="bg-[#c0c0c0] border-t-[2px] border-l-[2px] border-[#808080] border-b-[2px] border-r-[2px] border-white px-4 py-1 text-sm shadow-[inset_1px_1px_black]">
-                    C:\CORE_MEMORIES\ARCHIVES
-                </div>
-            </div>
-        </main>
+            </main>
+        </div>
     );
 }

@@ -8,7 +8,8 @@ export const metadata = {
 };
 
 export default async function BlogEntriesPage({ params }) {
-    const { blogId } = await params;
+    const { blogID } = await params;
+    const blogId = blogID;
 
     // In our new schema, blogId from the URL actually matches the gameId
     const entries = getBlogsByGameId(blogId);
@@ -17,60 +18,66 @@ export default async function BlogEntriesPage({ params }) {
     const videoEntries = entries.filter((entry) => entry.type === "Video");
 
     return (
-        <main className="min-h-screen bg-[#008080] p-4 sm:p-8 md:p-16 relative overflow-hidden font-sans">
-            <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-[url('/resources/textures/noise.png')] z-0"></div>
+        <div className="pt-32 pb-20 bg-[#0a0a0a] min-h-screen selection:bg-white selection:text-black relative">
+            {/* Very subtle ambient noise */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-screen bg-[url('/resources/textures/noise.png')]"></div>
 
-            <div className="relative z-10 max-w-7xl mx-auto pb-16">
-
+            <main className="max-w-screen-xl mx-auto px-6 md:px-10 relative z-10 text-center md:text-left">
+                {/* Header Back Link */}
                 <div className="mb-8">
-                    <Link href="/blogs" className="bg-[#c0c0c0] inline-block border-t border-l border-white border-b border-r border-[#808080] shadow-[1px_1px_black] px-2 py-1 text-sm font-bold text-black hover:bg-[#d0d0d0] active:shadow-none active:translate-y-[1px] active:translate-x-[1px]">
-                        &larr; C:\CORE_MEMORIES\ARCHIVES
+                    <Link href="/blogs" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors font-sans text-sm tracking-widest uppercase">
+                        <span>&larr;</span> Back to Archives
                     </Link>
                 </div>
 
-                <div className="mb-12 bg-[#000080] border-t-2 border-l-2 border-white border-b-2 border-r-2 border-[#808080] p-1 inline-block shadow-md w-full max-w-3xl">
-                    <h1 className="text-xl font-bold text-white flex items-center justify-between px-2 py-1">
-                        <span>EXPLORING: {blogId.toUpperCase()}</span>
-                        <div className="flex gap-1">
-                            <div className="bg-[#c0c0c0] w-4 h-4 border-t border-l border-white border-b border-r border-[#808080] flex items-center justify-center text-black text-xs cursor-pointer">_</div>
-                            <div className="bg-[#c0c0c0] w-4 h-4 border-t border-l border-white border-b border-r border-[#808080] flex items-center justify-center text-black text-xs cursor-pointer">□</div>
-                            <div className="bg-[#c0c0c0] w-4 h-4 border-t border-l border-white border-b border-r border-[#808080] flex items-center justify-center text-black text-xs cursor-pointer">x</div>
-                        </div>
+                <div className="mb-12">
+                    <h1 className="text-4xl md:text-5xl font-sans font-black text-white tracking-tighter mb-2 leading-none">
+                        EXPLORING: {blogId.toUpperCase()}
                     </h1>
-                    <div className="bg-white p-4 h-auto min-h-[300px] border-t border-l border-[#808080] border-b border-r border-white">
-
-                        {/* Section: Disquetes (Written) */}
-                        {writtenEntries.length > 0 && (
-                            <section className="mb-8">
-                                <h2 className="text-lg font-bold border-b-2 border-black inline-block mb-4">WRITTEN LOGS (A:)</h2>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center mt-2">
-                                    {writtenEntries.map((entry) => (
-                                        <Disquete key={entry.id} entry={entry} blogId={blogId} />
-                                    ))}
-                                </div>
-                            </section>
-                        )}
-
-                        {/* Section: CDs (Videos) */}
-                        {videoEntries.length > 0 && (
-                            <section>
-                                <h2 className="text-lg font-bold border-b-2 border-black inline-block mb-4">VIDEO ARCHIVES (D:)</h2>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center mt-2">
-                                    {videoEntries.map((entry) => (
-                                        <CD key={entry.id} entry={entry} blogId={blogId} />
-                                    ))}
-                                </div>
-                            </section>
-                        )}
-
-                        {writtenEntries.length === 0 && videoEntries.length === 0 && (
-                            <p className="text-gray-500 italic mt-4">Directory is empty.</p>
-                        )}
-
-                    </div>
+                    <p className="text-zinc-500 font-sans text-base max-w-2xl">
+                        Viewing all recorded developer logs and multimedia artifacts for this project.
+                    </p>
                 </div>
 
-            </div>
-        </main>
+                <div className="mt-12 space-y-16">
+                    {/* Section: Disquetes (Written) */}
+                    {writtenEntries.length > 0 && (
+                        <section>
+                            <h2 className="text-2xl font-bold text-white tracking-tight mb-8">
+                                Written Logs
+                                <span className="ml-3 text-xs font-mono text-zinc-600 font-normal">VOL 1</span>
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 justify-items-center">
+                                {writtenEntries.map((entry) => (
+                                    <Disquete key={entry.id} entry={entry} blogId={blogId} />
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Section: CDs (Videos) */}
+                    {videoEntries.length > 0 && (
+                        <section>
+                            <h2 className="text-2xl font-bold text-white tracking-tight mb-8">
+                                Multimedia Archives
+                                <span className="ml-3 text-xs font-mono text-zinc-600 font-normal">VOL 2</span>
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 justify-items-center">
+                                {videoEntries.map((entry) => (
+                                    <CD key={entry.id} entry={entry} blogId={blogId} />
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {writtenEntries.length === 0 && videoEntries.length === 0 && (
+                        <div className="py-20 text-center border-t border-white/10 mt-10">
+                            <p className="text-zinc-500 font-sans text-lg">No archives found in this directory.</p>
+                        </div>
+                    )}
+                </div>
+
+            </main>
+        </div>
     );
 }

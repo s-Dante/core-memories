@@ -5,16 +5,16 @@ import { courier } from "@/app/layout";
 
 export default function CD({ entry, blogId }) {
     return (
-        <article className="group relative w-full aspect-square max-w-[180px] mx-auto cursor-pointer">
+        <article className="group relative w-[300px] sm:w-[360px] aspect-square mx-auto cursor-pointer [perspective:1000px]">
             <Link href={`/blogs/${blogId}/${entry.id}`} className="block w-full h-full">
 
                 {/* CD Jewel Case Shadow */}
                 <div className="absolute inset-1 bg-black/50 blur-md rounded-sm z-0 translate-y-2"></div>
 
-                {/* Jewel Case Back/Base */}
-                <div className="absolute inset-0 bg-gray-300 border-2 border-gray-400 rounded shadow-inner z-10 flex items-center justify-center overflow-hidden">
-                    {/* CD Disc Element that slightly spins outward on hover */}
-                    <div className="w-[90%] h-[90%] bg-gradient-to-tr from-gray-100 via-gray-400 to-gray-200 rounded-full border border-gray-500 flex items-center justify-center shadow-lg transition-transform duration-700 ease-in-out group-hover:-translate-x-8 group-hover:rotate-180 relative z-20">
+                {/* Jewel Case Back/Base (Removed overflow-hidden so the CD can slide out) */}
+                <div className="absolute inset-0 bg-[#222225] border-2 border-[#404040] rounded shadow-inner z-10 flex items-center justify-center">
+                    {/* CD Disc Element that spins and slides OUT (right) visibly on hover */}
+                    <div className="w-[85%] h-[85%] bg-gradient-to-tr from-gray-100 via-gray-400 to-gray-200 rounded-full border border-gray-500 flex items-center justify-center shadow-md transition-all duration-700 ease-in-out group-hover:translate-x-[50%] group-hover:rotate-180 group-hover:shadow-[10px_0_15px_rgba(0,0,0,0.4)] relative z-20">
                         {/* Inner CD Rim */}
                         <div className="w-1/3 h-1/3 bg-gray-300/80 rounded-full border border-gray-500 flex items-center justify-center relative">
                             {/* CD Hole */}
@@ -24,27 +24,29 @@ export default function CD({ entry, blogId }) {
                     </div>
                 </div>
 
-                {/* Jewel Case Front Cover Container */}
-                <div className="absolute inset-0 z-30 transform-origin-left transition-transform duration-700 group-hover:rotate-y-[-110deg] shadow-[inset_-2px_0_4px_rgba(0,0,0,0.2)]">
-                    {/* Hinge Line */}
-                    <div className="absolute left-0 top-0 bottom-0 w-3 bg-gray-400 border-r border-gray-500 flex flex-col justify-evenly items-center z-40 opacity-90">
-                        <div className="w-1 h-3 bg-gray-500 rounded-sm"></div>
-                        <div className="w-1 h-3 bg-gray-500 rounded-sm"></div>
+                {/* Jewel Case Front Cover Layer (The part that opens) */}
+                <div className="absolute inset-0 z-30 origin-left transition-transform duration-700 ease-out group-hover:[transform:rotateY(-120deg)] shadow-[inset_-2px_0_4px_rgba(0,0,0,0.5)] transform-gpu outline outline-1 outline-[#555] bg-black/60 backdrop-blur-[2px]">
+                    
+                    {/* Hinge Detail (Left Edge) */}
+                    <div className="absolute left-0 top-0 bottom-0 w-3 bg-[#111] border-r border-[#333] flex flex-col justify-evenly items-center z-40">
+                        <div className="w-1 h-4 bg-[#222] rounded-sm shadow-inner"></div>
+                        <div className="w-1 h-4 bg-[#222] rounded-sm shadow-inner"></div>
                     </div>
 
-                    <div className="absolute inset-y-0 right-0 left-3 bg-[#0d0d0f] border-t border-b border-r border-[#404040] shadow-md p-1 pl-2 overflow-hidden flex flex-col items-center">
-                        <div className="w-full text-center mt-2 border-b border-red-800 pb-1 mb-2">
-                            <p className={`${courier.className} font-bold text-[10px] text-white tracking-widest uppercase`}>MULTIMEDIA</p>
+                    {/* Paper Booklet Inside the Cover */}
+                    <div className="absolute inset-y-1 right-1 left-4 bg-[#0a0a0a] border border-[#333] shadow-md p-2 flex flex-col items-center">
+                        <div className="w-full text-center mt-2 border-b border-red-800 pb-2 mb-2">
+                            <p className={`${courier.className} font-bold text-xs sm:text-sm text-white tracking-widest uppercase`}>MULTIMEDIA</p>
                         </div>
-                        <p className="text-white font-sans text-xs font-black uppercase text-center leading-tight">
+                        <p className="text-white font-sans text-sm sm:text-base font-black uppercase text-center leading-tight">
                             {entry.title}
                         </p>
-                        <div className="absolute bottom-2 right-2 text-red-500 font-mono text-[8px] border border-red-500 px-1">
+                        <div className="absolute bottom-2 right-2 text-red-500 font-mono text-[9px] sm:text-[10px] border border-red-500 px-1.5 py-0.5">
                             REC {entry.duration || ">>"}
                         </div>
                     </div>
-                    {/* Plastic Glare */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none z-50"></div>
+                    {/* Plastic Glare over the entire front cover */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-white/20 to-transparent pointer-events-none z-50"></div>
                 </div>
             </Link>
         </article>

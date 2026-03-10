@@ -1,39 +1,40 @@
 // components/BlogsComponents/Disquete.jsx
 import Link from "next/link";
 import { courier } from "@/app/layout";
+import CSSFloppy from "./CSSFloppy";
 
 export default function Disquete({ entry, blogId }) {
-    return (
-        <article className="relative w-full aspect-[3/4] max-w-[200px] mx-auto group perspective-1000">
-            <Link href={`/blogs/${blogId}/${entry.id}`} className="block w-full h-full relative transition-transform duration-300 transform-style-3d group-hover:rotate-y-12">
+    // Generate text content for the floppy label
+    const labelData = (
+        <div className="flex flex-col h-full items-center justify-between text-black relative z-10 w-full">
+            {/* Title Area */}
+            <div className="w-full text-center border-b border-gray-300 pb-1 mb-1.5 truncate">
+                <span className={`${courier.className} font-bold text-sm sm:text-base uppercase truncate block w-full leading-tight`}>
+                    {entry.title}
+                </span>
+            </div>
 
-                {/* Document Shadow */}
-                <div className="absolute inset-x-2 -bottom-2 h-4 bg-black/40 blur-md rounded-full shadow-2xl z-0"></div>
+            {/* Content Preview */}
+            <div className="flex-1 w-full overflow-hidden text-[10px] sm:text-[11px] leading-tight font-mono text-gray-700 text-justify mt-1.5 line-clamp-3 opacity-90" style={{ wordSpacing: '-1px' }}>
+                {entry.summary}
+            </div>
 
-                {/* Main Paper Body */}
-                <div className="absolute inset-0 bg-[#fdfaf6] border border-gray-300 shadow-[2px_2px_5px_rgba(0,0,0,0.5)] z-10 flex flex-col p-4 overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[url('/resources/textures/noise.png')] before:opacity-10 before:mix-blend-multiply before:pointer-events-none">
-
-                    {/* Folded Corner Effect */}
-                    <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-transparent via-transparent to-black/10 border-b border-l border-gray-200 shadow-sm z-20"></div>
-
-                    <div className="border-b-2 border-dashed border-gray-400 pb-2 mb-3">
-                        <p className={`${courier.className} font-bold text-sm tracking-tighter text-black uppercase truncate flex items-center gap-1`}>
-                            <span className="text-[10px]">C:\</span> {entry.title}
-                        </p>
-                    </div>
-
-                    <div className="flex-1 overflow-hidden">
-                        <div className="text-[8px] leading-tight font-mono text-gray-500 text-justify line-clamp-[12] select-none break-all" style={{ wordSpacing: '-2px' }}>
-                            {entry.summary.repeat(5)}
-                        </div>
-                    </div>
-
-                    <div className="mt-auto pt-2 border-t border-gray-200">
-                        <p className="font-mono text-[10px] text-gray-600 font-bold uppercase">{entry.date}</p>
-                        <p className="font-mono text-[9px] text-blue-800 bg-blue-100 px-1 inline-block mt-1 uppercase border border-blue-200">{entry.tags?.[0] || "LOG"}</p>
-                    </div>
-
+            {/* Footer / Meta Area */}
+            <div className="w-full mt-auto pt-1.5 border-t border-gray-300 flex justify-between items-center px-1">
+                <div className="font-mono text-[9px] sm:text-[10px] text-gray-800 font-bold bg-white/50 px-2 py-0.5 rounded-sm border border-gray-300 uppercase">
+                    {entry.tags?.[0] || "LOG"}
                 </div>
+                <div className="font-mono text-[8px] sm:text-[9px] text-gray-500 font-bold uppercase tracking-tighter">
+                    {entry.date}
+                </div>
+            </div>
+        </div>
+    );
+
+    return (
+        <article className="relative w-[300px] sm:w-[360px] aspect-square mx-auto group">
+            <Link href={`/blogs/${blogId}/${entry.id}`} className="block w-full h-full relative transition-transform duration-300 group-hover:-translate-y-2">
+                <CSSFloppy labelContent={labelData} className="drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300" />
             </Link>
         </article>
     );
