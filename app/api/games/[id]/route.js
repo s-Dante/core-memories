@@ -1,15 +1,12 @@
 // app/api/games/[id]/route.js
 
-import gamesData from "@/public/data/games.json"; // Renombramos para claridad
+import { getGameById } from "@/data/games";
 
-export async function GET(request, { params }) {
-  // No necesitas 'await' aquí, Next.js lo maneja. La advertencia es informativa.
-  const { id } = params; 
+export async function GET(request, props) {
+  const params = await props.params;
+  const { id } = params;
 
-  // --- INICIO DE CAMBIOS ---
-  // Accedemos a la lista DENTRO del objeto importado
-  const game = gamesData.games.find((g) => g.id === Number(id)); 
-  // --- FIN DE CAMBIOS ---
+  const game = getGameById(id);
 
   if (!game) {
     return new Response(JSON.stringify({ error: "Game not found" }), {

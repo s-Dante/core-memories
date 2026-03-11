@@ -11,7 +11,7 @@ export const team = [
             linkedin: "https://www.linkedin.com/in/s-dante/",
             github: "https://github.com/s-Dante"
         },
-        projects: ["world-park"]
+        projects: ["world-park", "robot-mission"]
     },
     {
         id: "fernanda-gonzalez",
@@ -25,22 +25,22 @@ export const team = [
             portfolio: "https://readymag.website/u172468742/5593618/",
             instagram: "https://instagram.com/okidokifercha/"
         },
-        projects: ["world-park"]
+        projects: ["world-park", "robot-mission"]
     },
-    {
-        id: "stacy-chapa",
-        name: "Stacy Chapa",
-        role: "Animadora 2D / Concept Artist",
-        status: "Active",
-        bio: "@h_a_ls",
-        image: "/resources/imgs/AboutImgs/Crew/StacyChapa.jpg",
-        skills: ["Animadora 2D", "Concept Artist"],
-        socials: {
-            instagram: "https://www.instagram.com/h_a_ls",
-            linkedin: "https://www.linkedin.com/in/stacychapa/"
-        },
-        projects: ["world-park"]
-    },
+    // {
+    //     id: "stacy-chapa",
+    //     name: "Stacy Chapa",
+    //     role: "Animadora 2D / Concept Artist",
+    //     status: "Inactive",
+    //     bio: "@h_a_ls",
+    //     image: "/resources/imgs/AboutImgs/Crew/StacyChapa.jpg",
+    //     skills: ["Animadora 2D", "Concept Artist"],
+    //     socials: {
+    //         instagram: "https://www.instagram.com/h_a_ls",
+    //         linkedin: "https://www.linkedin.com/in/stacychapa/"
+    //     },
+    //     projects: ["world-park"]
+    // },
     {
         id: "sofia-villegas",
         name: "Sofia Villegas",
@@ -53,7 +53,7 @@ export const team = [
             portfolio: "https://www.sofiavillegas.com/#contacto",
             instagram: "https://www.instagram.com/fiiasso/"
         },
-        projects: ["world-park"]
+        projects: ["world-park", "robot-mission"]
     }
 ];
 

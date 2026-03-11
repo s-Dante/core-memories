@@ -8,6 +8,7 @@ const sectionClasses = `
     bg-zinc-900
     flex items-center justify-center
     w-full
+    snap-start
 `;
 
 const containerClasses = `

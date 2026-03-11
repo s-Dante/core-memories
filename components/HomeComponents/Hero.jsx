@@ -9,6 +9,7 @@ const sectionClasses = `
     bg-zinc-900 text-zinc-200 
     flex items-center justify-center // Usamos flex para centrar el contenido como base
     overflow-hidden
+    snap-start
 `;
 
 const imgBgClasses = `
@@ -49,10 +50,10 @@ export default function Hero() {
             <svg className="absolute -z-30 w-0 h-0" aria-hidden="true" focusable="false">
                 <filter id="warp">
                     <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="2" result="noise">
-                        <animate attributeName="baseFrequency" values="0.008;0.005;0.008" dur="20s" repeatCount="indefinite" />
+                        <animate attributeName="baseFrequency" values="0.005;0.009;0.005" dur="15s" repeatCount="indefinite" />
                     </feTurbulence>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="22" xChannelSelector="R" yChannelSelector="G">
-                        <animate attributeName="scale" values="8;11;8" dur="20s" repeatCount="indefinite" />
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G">
+                        <animate attributeName="scale" values="10;25;10" dur="15s" repeatCount="indefinite" />
                     </feDisplacementMap>
                 </filter>
             </svg>

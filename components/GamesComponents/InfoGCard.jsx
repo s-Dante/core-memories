@@ -25,7 +25,7 @@ export default function InfoGCard({ game, id }) {
                     >
                         {/* The Game Image popping out - Reduced size */}
                         <div className="w-[70%] aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border border-white/10 mx-auto bg-[#1a1a1a] relative rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500">
-                            <Image src={game.coverImage} alt={game.title} fill className="object-cover" unoptimized />
+                            <Image src={game.folderImage || game.coverImage} alt={game.title} fill className="object-cover" unoptimized />
                         </div>
                     </Folder>
                 </div>

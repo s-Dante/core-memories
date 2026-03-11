@@ -35,7 +35,7 @@ const bodyClasses = `
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="snap-y snap-proximity">
       <body className={bodyClasses} >
         <Header />
 

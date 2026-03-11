@@ -7,12 +7,13 @@ const sectionClasses = `
     min-h-screen
     flex flex-col justify-between
     bg-zinc-900
+    snap-start
 `;
 
 const phraseClasses = `
     ${varien.className}
     uppercase tracking-tight
-    text-4xl sm:text-6xl md:text-7xl lg:text-[8rem]
+    text-5xl sm:text-6xl md:text-7xl lg:text-[8rem]
     leading-none
     max-w-7xl
 `;
