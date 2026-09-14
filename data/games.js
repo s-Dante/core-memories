@@ -209,7 +209,7 @@ export const games = [
     shortDescription: "En un centro comercial se encuentran unas diminutas partículas buscando completar su lista lo más rápido posible para ir a pagar sus compras.",
     description: "En un centro comercial se encuentran unas diminutas partículas, que históricamente no se llevan muy bien, por lo que, con la intención de no verse por mucho tiempo y terminar de hacer el mandado antes que los demás, buscan completar su lista lo mas rápido posible para ir a pagar sus compras, aunque su competitividad les haga hacerles travesuras a las otras partículas.",
     coverImage: "/resources/imgs/GamesImgs/Covers/SubatomicShoppingFight/SubatomicShoppingFight.JPG",
-    folderImage: "/resources/imgs/GamesImgs/Covers/SubatomicShoppingFigth/SubatomicShoppingFight.JPG",
+    folderImage: "/resources/imgs/GamesImgs/Covers/SubatomicShoppingFight/SubatomicShoppingFight.JPG",
     screenshots: [],
     features: [
       "Completa tu lista de compras",
