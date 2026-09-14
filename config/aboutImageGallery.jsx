@@ -5,37 +5,37 @@ export const aboutImageGallery = {
     images: [
         {
             id: 1,
-            src: generlPath + "10.JPG",
+            src: generlPath + "10.jpg",
             alt: generalDescription + " momento casual"
         },
         {
             id: 2,
-            src: generlPath + "11.JPG",
+            src: generlPath + "11.jpg",
             alt: generalDescription + " trabajando duro"
         },
         {
             id: 3,
-            src: generlPath + "12.JPG",
+            src: generlPath + "12.jpg",
             alt: generalDescription + " en el estudio"
         },
         {
             id: 4,
-            src: generlPath + "13.JPG",
+            src: generlPath + "13.jpg",
             alt: generalDescription + " de reunión"
         },
         {
             id: 5,
-            src: generlPath + "14.JPG",
+            src: generlPath + "14.jpg",
             alt: generalDescription + " diseñando"
         },
         {
             id: 6,
-            src: generlPath + "15.JPG",
+            src: generlPath + "15.jpg",
             alt: generalDescription + " programando"
         },
         {
             id: 7,
-            src: generlPath + "16.JPG",
+            src: generlPath + "16.jpg",
             alt: generalDescription + " equipo"
         }
     ]
