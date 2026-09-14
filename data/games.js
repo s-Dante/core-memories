@@ -198,6 +198,70 @@ export const games = [
       keywords: ["Robot Mission", "shooter sci fi", "robots", "UE5"],
       excerpt: "Controla a Unidad-11 y detén una fábrica automatizada cuyo sistema central ha corrompido a todos los robots."
     }
+  },
+  {
+    id: "subatomic-shopping-flight",
+    title: "Subatomic Shopping Flight",
+    status: "EN DESARROLLO",
+    releaseDate: "TBA",
+    genre: ["Party game", "Action", "Racing game"],
+    engine: "UE5",
+    shortDescription: "En un centro comercial se encuentran unas diminutas partículas buscando completar su lista lo más rápido posible para ir a pagar sus compras.",
+    description: "En un centro comercial se encuentran unas diminutas partículas, que históricamente no se llevan muy bien, por lo que, con la intención de no verse por mucho tiempo y terminar de hacer el mandado antes que los demás, buscan completar su lista lo mas rápido posible para ir a pagar sus compras, aunque su competitividad les haga hacerles travesuras a las otras partículas.",
+    coverImage: "/resources/imgs/GamesImgs/Covers/SubatomicShoppingFIght.JPG",
+    folderImage: "/resources/imgs/GamesImgs/Covers/SubatomicShoppingFlight-folder.jpg",
+    screenshots: [],
+    features: [
+      "Completa tu lista de compras",
+      "Ser el primero en pagar tus compras",
+      "Ataca por lo menos a un rival"
+    ],
+    team: ["dante-fernandez", "fernanda-gonzalez", "stacy-chapa", "narayani-cabrera", "cristina-maldonado"],
+    details: {
+      location: "Centro comercial",
+      caseId: "#9988776",
+      theme: "Party y Competitivo",
+      platforms: ["PC"],
+      ageRating: "E (Todos)",
+      playtime: "Sesiones rápidas",
+      story: "En un centro comercial se encuentran unas diminutas partículas, que históricamente no se llevan muy bien, por lo que buscan completar su lista lo mas rápido posible.",
+      gameplay: "Completar listas de compras y atacar a rivales.",
+      coreLoop: [
+        "Buscar artículos de la lista de compras.",
+        "Evitar o atacar a otras partículas rivales.",
+        "Llegar primero a pagar para ganar."
+      ],
+      character: {
+        name: "Partícula",
+        profile: "Diminuta y competitiva.",
+        abilities: ["Correr", "Atacar", "Recoger objetos"],
+        collectibles: {
+          stampsTotal: 0,
+          sets: [],
+          loreCards: false,
+          educationalNotes: ""
+        },
+        mechanics: [
+          "correr por el centro comercial",
+          "recolectar items",
+          "atacar rivales"
+        ]
+      },
+      audio: {
+        style: "Divertido y frenético",
+        fx: "Golpes de caricatura, recolección de items"
+      },
+      uiUx: {
+        map: "Indicadores de items",
+        collectopedia: "Lista de compras"
+      },
+      artBible: [],
+      links: {}
+    },
+    seo: {
+      keywords: ["Subatomic Shopping Flight", "party game", "racing", "multijugador"],
+      excerpt: "Un party game frenético donde partículas diminutas compiten por completar su lista de compras."
+    }
   }
 ];
 

@@ -27,33 +27,55 @@ export const team = [
         },
         projects: ["world-park", "robot-mission"]
     },
-    // {
-    //     id: "stacy-chapa",
-    //     name: "Stacy Chapa",
-    //     role: "Animadora 2D / Concept Artist",
-    //     status: "Inactive",
-    //     bio: "@h_a_ls",
-    //     image: "/resources/imgs/AboutImgs/Crew/StacyChapa.jpg",
-    //     skills: ["Animadora 2D", "Concept Artist"],
-    //     socials: {
-    //         instagram: "https://www.instagram.com/h_a_ls",
-    //         linkedin: "https://www.linkedin.com/in/stacychapa/"
-    //     },
-    //     projects: ["world-park"]
-    // },
     {
-        id: "sofia-villegas",
-        name: "Sofia Villegas",
-        role: "Lead 3D Artist",
-        status: "Active",
-        bio: "@fiiasso",
-        image: "/resources/imgs/AboutImgs/Crew/SofiaVillegas.jpg",
-        skills: ["Lead 3D Artist"],
+        id: "stacy-chapa",
+        name: "Stacy Chapa",
+        role: "Animadora 2D / Concept Artist",
+        status: "Inactive",
+        bio: "@h_a_ls",
+        image: "/resources/imgs/AboutImgs/Crew/StacyChapa.jpg",
+        skills: ["Animadora 2D", "Concept Artist"],
         socials: {
-            portfolio: "https://www.sofiavillegas.com/#contacto",
-            instagram: "https://www.instagram.com/fiiasso/"
+            instagram: "https://www.instagram.com/h_a_ls",
+            linkedin: "https://www.linkedin.com/in/stacychapa/"
         },
-        projects: ["world-park", "robot-mission"]
+        projects: ["world-park"]
+    },
+    // {
+    //     id: "sofia-villegas",
+    //     name: "Sofia Villegas",
+    //     role: "Lead 3D Artist",
+    //     status: "Active",
+    //     bio: "@fiiasso",
+    //     image: "/resources/imgs/AboutImgs/Crew/SofiaVillegas.jpg",
+    //     skills: ["Lead 3D Artist"],
+    //     socials: {
+    //         portfolio: "https://www.sofiavillegas.com/#contacto",
+    //         instagram: "https://www.instagram.com/fiiasso/"
+    //     },
+    //     projects: ["world-park", "robot-mission"]
+    // }
+    {
+        id: "narayani-cabrera",
+        name: "Narayani Cabrera",
+        role: "Artista 2D / Social Media Manager",
+        status: "Active",
+        bio: "@narayani",
+        image: "/resources/imgs/AboutImgs/Crew/Narayani.jpeg",
+        skills: ["Artista 2D", "Social Media Manager"],
+        socials: null,
+        projects: ["subatomic-shopping-flight"]
+    },
+    {
+        id: "cristina-maldonado",
+        name: "Cristina Maldonado",
+        role: "Artista 3D / Programadora",
+        status: "Active",
+        bio: "@cris",
+        image: "/resources/imgs/AboutImgs/Crew/Cris.jpeg",
+        skills: ["Artista 3D", "Programadora"],
+        socials: null,
+        projects: ["subatomic-shopping-flight"]
     }
 ];
 
